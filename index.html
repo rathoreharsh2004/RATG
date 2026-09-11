@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -70,7 +70,7 @@ button{
   align-items:center;
   justify-content:space-between;
   color:#fff;
-  mix-blend-mode:normal;
+  transition:.3s ease;
 }
 
 .logo{
@@ -199,7 +199,7 @@ button{
   position:relative;
   background:
     linear-gradient(90deg,rgba(25,12,7,.85),rgba(25,12,7,.15)),
-    url("https://images.unsplash.com/photo-1599661046862-2d4837bac10c?auto=format&fit=crop&w=2000&q=85")
+    url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2000&q=85")
     center/cover;
   color:#fff;
   display:flex;
@@ -267,7 +267,7 @@ button{
   color:var(--brown);
 }
 
-/* ================= INTRO ================= */
+/* ================= INTRO (BRAND STORY) ================= */
 
 .intro{
   min-height:760px;
@@ -308,7 +308,7 @@ button{
   color:#66584e;
 }
 
-/* ================= HERITAGE ================= */
+/* ================= HERITAGE GRID (THE ART OF HERITAGE) ================= */
 
 .heritage{
   background:var(--brown);
@@ -380,7 +380,7 @@ button{
   color:rgba(238,230,212,.62);
 }
 
-/* ================= PROJECTS ================= */
+/* ================= PROJECTS SECTION ================= */
 
 .projects{
   padding:130px 0;
@@ -466,11 +466,17 @@ button{
   color:#fff;
   font-size:8px;
   letter-spacing:.16em;
-  cursor:pointer;
   border:0;
+  cursor:pointer;
+  display:inline-block;
+  transition:.3s;
 }
 
-/* ================= PROJECT MODAL ================= */
+.project-link:hover{
+  background:#3d2318;
+}
+
+/* ================= PROJECT MODAL (DETAIL VIEW) ================= */
 
 .project-modal{
   position:fixed;
@@ -556,7 +562,7 @@ button{
   transform:scale(1.04);
 }
 
-/* ================= MOSAIC ================= */
+/* ================= MOSAIC (DETAIL LANGUAGE) ================= */
 
 .mosaic{
   background:var(--brown);
@@ -594,7 +600,7 @@ button{
 .m7{grid-column:span 4;grid-row:span 2}
 .m8{grid-column:span 3;grid-row:span 2}
 
-/* ================= SERVICES ================= */
+/* ================= SERVICES (WHAT WE OFFER) ================= */
 
 .services{
   padding:130px 0;
@@ -676,6 +682,11 @@ button{
   color:var(--brown);
   font-size:8px;
   letter-spacing:.15em;
+  transition:.3s;
+}
+
+.cta-button:hover{
+  background:#fff;
 }
 
 .contact-details{
@@ -904,7 +915,7 @@ footer{
 
   <nav class="menu-links">
     <a href="#home">Home</a>
-    <a href="#story">Royal Legacy</a>
+    <a href="#story">Brand Story</a>
     <a href="#heritage">Craftsmanship</a>
     <a href="#projects">Signature Projects</a>
     <a href="#details">What We Offer</a>
@@ -927,9 +938,9 @@ footer{
   </a>
 
   <nav class="nav">
-    <a href="#projects">SIGNATURE PROJECTS</a>
+    <a href="#projects">PROJECTS</a>
     <a href="#heritage">CRAFTSMANSHIP</a>
-    <a href="#details">OFFERINGS</a>
+    <a href="#details">SERVICES</a>
   </nav>
 
   <button class="menu-btn" id="menuBtn">
@@ -953,7 +964,7 @@ footer{
   <div class="shell hero-content reveal">
 
     <div class="eyebrow">
-      Preserving Royal Legacy Through Timeless Heritage Architecture
+      Craftsmanship · Heritage Construction · Luxury Interiors
     </div>
 
     <h1>
@@ -963,12 +974,12 @@ footer{
     </h1>
 
     <p>
-      Rathore Heritage Developers specializes in authentic heritage construction with deep expertise in traditional architectural craftsmanship.
+      Heritage construction and luxury spaces shaped by traditional Rajasthani craftsmanship, royal havelis, and authentic fort architecture.
     </p>
 
     <div class="hero-actions">
       <a href="#projects" class="btn">
-        Explore Projects <span>→</span>
+        Explore Our Work <span>→</span>
       </a>
 
       <a href="#heritage" class="btn">
@@ -997,7 +1008,7 @@ footer{
   <div class="intro-copy reveal">
 
     <div class="eyebrow">
-      About Rathore Heritage Developers
+      Brand Story
     </div>
 
     <h2>
@@ -1006,11 +1017,11 @@ footer{
     </h2>
 
     <p>
-      We design luxurious heritage spaces including havelis, villas, resorts, and palace-style interiors that reflect royal elegance and cultural authenticity.
+      Rathore Heritage Developers specializes in authentic heritage construction with deep expertise in traditional architectural craftsmanship, creating magnificent havelis and palaces.
     </p>
 
     <p>
-      By blending traditional artistry with strong civil engineering practices, we ensure strength, durability, and timeless beauty in every project.
+      Every space is conceived as a dialogue between architecture, raw stonework, traditional lime finishes, and rich regional identity.
     </p>
 
   </div>
@@ -1027,7 +1038,7 @@ footer{
     <div class="section-head reveal">
 
       <div class="eyebrow">
-        Our Craftsmanship
+        Craftsmanship
       </div>
 
       <h2>
@@ -1035,7 +1046,7 @@ footer{
       </h2>
 
       <p>
-        From flooring to ceiling, lighting to furniture — delivering a complete royal palace-style heritage experience.
+        Individual traditions composed as royal architectural experiences — raw, authentic, and layered with historical depth.
       </p>
 
     </div>
@@ -1054,7 +1065,7 @@ footer{
         </h3>
 
         <p>
-          A grand traditional heritage dodi (main entrance gate) constructed at the entrance, creating a royal first impression.
+          Grand traditional dodi gates crafted with monumental proportions to create an authentic royal welcome.
         </p>
 
       </article>
@@ -1063,7 +1074,7 @@ footer{
       <article class="heritage-card reveal">
 
         <div class="heritage-card-image">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Jharokha & Mehrabs">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Jharokhas & Mehrabs">
         </div>
 
         <h3>
@@ -1071,7 +1082,7 @@ footer{
         </h3>
 
         <p>
-          Designing and executing traditional elements like Jharokhas, Torans, Chhatris, Domes, Jalis, Mehrabs, and Baradaris.
+          Hand-carved architectural elements including jharokhas, mehrabs, torans, chhatris, and domes.
         </p>
 
       </article>
@@ -1088,7 +1099,7 @@ footer{
         </h3>
 
         <p>
-          Intricate glass inlay work on interior ceilings, decorative aaliya niches, and heritage-style bar areas enhancing light reflection.
+          Reflective mirror and glass inlay work composing luminous royal ceiling and wall patterns.
         </p>
 
       </article>
@@ -1101,11 +1112,11 @@ footer{
         </div>
 
         <h3>
-          Mor Pankh Ceilings
+          Mor Pankh & Tordi Work
         </h3>
 
         <p>
-          Ceilings detailed with Mor Pankh (peacock feather) artwork alongside authentic Pipal Patti and Tordi craftsmanship.
+          Traditional peacock motifs and classic ceiling detailing using authentic pipal patti and tordi craftsmanship.
         </p>
 
       </article>
@@ -1114,58 +1125,7 @@ footer{
       <article class="heritage-card reveal">
 
         <div class="heritage-card-image">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Ghokda Domes">
-        </div>
-
-        <h3>
-          Ghokda-Style Domes
-        </h3>
-
-        <p>
-          Terrace-level domes constructed in traditional style to enhance architectural elegance and authentic heritage character.
-        </p>
-
-      </article>
-
-
-      <article class="heritage-card reveal">
-
-        <div class="heritage-card-image">
-          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Carved Furniture">
-        </div>
-
-        <h3>
-          Carved Heritage Furniture
-        </h3>
-
-        <p>
-          Custom-designed antique finish furniture, carved beds, traditional doors, and royal seating configurations.
-        </p>
-
-      </article>
-
-
-      <article class="heritage-card reveal">
-
-        <div class="heritage-card-image">
-          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Royal Jhomer Chandeliers">
-        </div>
-
-        <h3>
-          Royal Jhomer Chandeliers
-        </h3>
-
-        <p>
-          Statement lighting elements including royal jhomer chandeliers, hanging lights, and antique wall fixtures.
-        </p>
-
-      </article>
-
-
-      <article class="heritage-card reveal">
-
-        <div class="heritage-card-image">
-          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Marble Inlay & Khajur Patti">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Marble Inlay & Khajur Patti">
         </div>
 
         <h3>
@@ -1173,7 +1133,58 @@ footer{
         </h3>
 
         <p>
-          Premium white marble flooring with borders finished in Khajur Patti detailing, marble inlay, and Patang patterns.
+          Exquisite stone work featuring marble inlay borders, khajur patti, and traditional patang flooring patterns.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Heritage Style Furniture">
+        </div>
+
+        <h3>
+          Heritage Style Furniture
+        </h3>
+
+        <p>
+          Custom wooden beds, antique finish tables, and royal seating designed at human and palatial scale.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Jhomer Chandeliers & Lights">
+        </div>
+
+        <h3>
+          Jhomer & Hanging Lights
+        </h3>
+
+        <p>
+          Palace-style jhomer chandeliers and antique hanging wall lights casting warm historical illumination.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Lime & Cement Wall Work">
+        </div>
+
+        <h3>
+          Lime Work & Fresco Art
+        </h3>
+
+        <p>
+          Traditional lime finishes, textured wall surfaces, and hand-painted artistic fresco detailing.
         </p>
 
       </article>
@@ -1195,17 +1206,17 @@ footer{
 
       <div>
         <div class="eyebrow">
-          Signature Projects
+          Selected Projects
         </div>
 
         <h2>
           Spaces with<br>
-          a Royal Legacy.
+          a Story.
         </h2>
       </div>
 
       <p>
-        From heritage havelis to luxury villas and commercial spaces rooted in traditional craftsmanship.
+        From heritage havelis to royal retreats, every project preserves the true essence of traditional Rajasthan.
       </p>
 
     </div>
@@ -1231,7 +1242,7 @@ footer{
         </h3>
 
         <p>
-          Designed and executed in a complete traditional heritage style, combining Rajasthani heritage architecture with modern civil engineering standards.
+          A majestic haveli featuring grand dodi entries, intricate Thekri glass work, Ghokda domes, and traditional marble flooring with khajur patti borders.
         </p>
 
         <button class="project-link" onclick="openModal('oladarModal')">
@@ -1250,7 +1261,7 @@ footer{
       <div class="project-info">
 
         <div class="eyebrow">
-          Udaipur · Luxury Heritage Villa
+          Udaipur · Luxury Heritage Hotel
         </div>
 
         <h3>
@@ -1259,7 +1270,7 @@ footer{
         </h3>
 
         <p>
-          A magnificent heritage-style project featuring beautifully crafted heritage windows, traditional arches, intricate glass inlay work, and classic furniture.
+          A palace-style villa experience showcasing carved window frames, traditional arches, and royal hospitality interiors.
         </p>
 
         <button class="project-link" onclick="openModal('roopModal')">
@@ -1280,15 +1291,13 @@ footer{
     <article class="project reveal">
 
       <div class="project-image">
-
         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1500&q=85" alt="Mohan Villa">
-
       </div>
 
       <div class="project-info">
 
         <div class="eyebrow">
-          Udaipur · Heritage Style Villa / Farmhouse
+          Udaipur · Heritage Style Villa
         </div>
 
         <h3>
@@ -1297,7 +1306,7 @@ footer{
         </h3>
 
         <p>
-          Luxurious villa showcasing beautifully carved arches, decorative wall artwork, stained glass windows, and antique silver finish heritage furniture.
+          A grand farmhouse vocabulary elevated through handcrafted stone pillars, stained glass, and antique silver-finish heritage furniture.
         </p>
 
         <button class="project-link" onclick="openModal('mohanModal')">
@@ -1325,7 +1334,7 @@ footer{
         </h3>
 
         <p>
-          Luxurious heritage-themed grooming salon featuring Belgium glass work, intricate Thekri glass inlay, and authentic royal Rajasthani craftsmanship.
+          Commercial interiors infused with Belgium glass work, traditional painting art, and authentic royal Rajasthani detailing.
         </p>
 
         <button class="project-link" onclick="openModal('salonModal')">
@@ -1335,9 +1344,7 @@ footer{
       </div>
 
       <div class="project-image">
-
         <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85" alt="First Impression Salon">
-
       </div>
 
     </article>
@@ -1347,22 +1354,22 @@ footer{
 </section>
 
 
-<!-- ================= PROJECT MODALS ================= -->
+<!-- ================= PROJECT MODALS (DETAIL PAGES) ================= -->
 
-<!-- OLADAR MODAL -->
+<!-- OLADAR HAVELI MODAL -->
 <div class="project-modal" id="oladarModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('oladarModal')">×</button>
     <div class="modal-location">Udaipur · Heritage Haveli Construction</div>
     <h2 class="modal-title">Oladar Haveli</h2>
     <p class="modal-desc">
-      The Oladar Haveli project has been designed and executed in a complete traditional heritage style, ensuring modern structural strength, quality control, and durability from foundation to final finishing. Featuring a grand traditional heritage Dodi entrance, intricate Thekri glass work on ceilings and aaliya niches, Mor Pankh themed artwork with Pipal Patti and Tordi detailing, Ghokda-style terrace domes, and premium white marble flooring with Khajur Patti borders.
+      The Oladar Haveli project has been designed and executed in a complete traditional heritage style, featuring grand Dodi entry gates, intricate Thekri glass inlay work on ceilings and aaliya niches, Mor Pankh themed ceiling art with Pipal Patti and Tordi craftsmanship, Ghokda-style terrace domes, and pristine white marble flooring with Khajur Patti border detailing.
     </p>
     <div class="modal-gallery">
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Oladar 1"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Oladar 2"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Oladar 3"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Oladar 4"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Oladar detail 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Oladar detail 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Oladar detail 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Oladar detail 4"></div>
     </div>
   </div>
 </div>
@@ -1371,16 +1378,16 @@ footer{
 <div class="project-modal" id="roopModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('roopModal')">×</button>
-    <div class="modal-location">Udaipur · Luxury Heritage Villa</div>
+    <div class="modal-location">Udaipur · Luxury Heritage Hotel</div>
     <h2 class="modal-title">Roop Mahal</h2>
     <p class="modal-desc">
-      Roop Mahal is a magnificent heritage-style project inspired by the timeless architecture of Rajasthan. The exterior showcases beautifully crafted heritage-style windows, traditional arches, and elegant façade detailing that reflects the charm of royal havelis. The space highlights intricate glass inlay work, artistic carvings, and classic heritage furniture that enhance the royal character of the project.
+      Roop Mahal showcases the pinnacle of royal Rajasthani architecture. The building features classic arched windows, magnificent stone brackets, antique jhomer chandeliers, and handcrafted wooden furniture that evoke the genuine atmosphere of an ancient royal residence.
     </p>
     <div class="modal-gallery">
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 1"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 2"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 3"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 4"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal detail 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal detail 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal detail 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal detail 4"></div>
     </div>
   </div>
 </div>
@@ -1389,40 +1396,40 @@ footer{
 <div class="project-modal" id="mohanModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('mohanModal')">×</button>
-    <div class="modal-location">Udaipur · Heritage Style Villa / Farmhouse</div>
+    <div class="modal-location">Udaipur · Heritage Style Villa</div>
     <h2 class="modal-title">Mohan Villa</h2>
     <p class="modal-desc">
-      Mohan Villa is a luxurious heritage-style villa inspired by the traditional architecture of Rajasthani havelis. The design showcases beautifully carved arches, decorative wall artwork, and vibrant stained glass windows that enhance natural light and create a royal ambiance. The interiors feature intricately crafted heritage furniture with an antique silver finish, adding a palace-like elegance to the living spaces.
+      Mohan Villa blends farmhouse living with palatial architecture. Featuring carved stone pillars, vibrant stained glass windows, decorative wall art, and custom heritage bedroom suites designed for timeless luxury and comfort.
     </p>
     <div class="modal-gallery">
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 1"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 2"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 3"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 4"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa detail 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa detail 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa detail 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa detail 4"></div>
     </div>
   </div>
 </div>
 
-<!-- SALON MODAL -->
+<!-- FIRST IMPRESSION SALON MODAL -->
 <div class="project-modal" id="salonModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('salonModal')">×</button>
     <div class="modal-location">Udaipur · Premium Commercial Interior</div>
     <h2 class="modal-title">First Impression Salon</h2>
     <p class="modal-desc">
-      First Impression Salon is a luxurious heritage-themed salon inspired by the royal charm of Rajasthan. The space features heritage-style interiors, traditional furniture, Belgium glass work, and intricate Thekri glass work, reflecting authentic royal craftsmanship. Classic detailing, artistic elements, and elegant wordings enhance the regal ambiance, creating a premium grooming space with a true touch of heritage elegance.
+      A commercial space transformed into a heritage sanctuary. It integrates Belgium glass panels, traditional wall painting elements, ornate ceilings, and handcrafted antique seating to offer clients an authentic royal grooming experience.
     </p>
     <div class="modal-gallery">
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Salon 1"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Salon 2"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Salon 3"></div>
-      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Salon 4"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Salon detail 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Salon detail 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Salon detail 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Salon detail 4"></div>
     </div>
   </div>
 </div>
 
 
-<!-- ================= MOSAIC GALLERY ================= -->
+<!-- ================= DETAIL LANGUAGE (MOSAIC) ================= -->
 
 <section class="mosaic" id="gallery">
 
@@ -1439,7 +1446,7 @@ footer{
       </h2>
 
       <p>
-        A closer look at the traditional elements, materials and royal atmosphere that define our heritage spaces.
+        A closer look at the raw stonework, glass inlays, and atmospheric textures that define our heritage construction.
       </p>
 
     </div>
@@ -1448,35 +1455,35 @@ footer{
     <div class="mosaic-grid">
 
       <div class="mosaic-item m1 reveal">
-        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85" alt="Gallery 1">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85" alt="Detail 1">
       </div>
 
       <div class="mosaic-item m2 reveal">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Gallery 2">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Detail 2">
       </div>
 
       <div class="mosaic-item m3 reveal">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Gallery 3">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Detail 3">
       </div>
 
       <div class="mosaic-item m4 reveal">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Gallery 4">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Detail 4">
       </div>
 
       <div class="mosaic-item m5 reveal">
-        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=85" alt="Gallery 5">
+        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=85" alt="Detail 5">
       </div>
 
       <div class="mosaic-item m6 reveal">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Gallery 6">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Detail 6">
       </div>
 
       <div class="mosaic-item m7 reveal">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Gallery 7">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Detail 7">
       </div>
 
       <div class="mosaic-item m8 reveal">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Gallery 8">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Detail 8">
       </div>
 
     </div>
@@ -1486,7 +1493,7 @@ footer{
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- ================= SERVICES (WHAT WE OFFER) ================= -->
 
 <section class="services" id="details">
 
@@ -1499,7 +1506,7 @@ footer{
       </div>
 
       <h2>
-        Complete traditional development with authentic architectural detailing and strong structural execution.
+        Heritage spaces, built with the discipline of architecture and the patience of craft.
       </h2>
 
     </div>
@@ -1516,7 +1523,7 @@ footer{
         </div>
 
         <div class="service-description">
-          Complete traditional haveli development with authentic architectural detailing and strong structural execution.
+          Complete traditional haveli development with authentic architectural detailing, lime work, and structural durability.
         </div>
 
       </div>
@@ -1531,7 +1538,7 @@ footer{
         </div>
 
         <div class="service-description">
-          Royal-style villas designed with heritage aesthetics and modern civil engineering standards.
+          Royal-style villas designed with heritage aesthetics, jharokhas, chhatris, and traditional proportions.
         </div>
 
       </div>
@@ -1546,7 +1553,7 @@ footer{
         </div>
 
         <div class="service-description">
-          Grand farmhouse projects featuring domes, carved stonework, decorative pillars, and heritage ceilings.
+          Grand farmhouse retreats featuring domes, carved stonework, decorative pillars, and ornamental ceilings.
         </div>
 
       </div>
@@ -1561,7 +1568,7 @@ footer{
         </div>
 
         <div class="service-description">
-          Culturally rich hospitality spaces crafted with traditional craftsmanship and premium finishing.
+          Culturally rich hospitality spaces crafted with traditional stonemasonry, custom furniture, and jhomer lighting.
         </div>
 
       </div>
@@ -1576,7 +1583,7 @@ footer{
         </div>
 
         <div class="service-description">
-          Heritage-inspired interior solutions including Thekri glass work, heritage Dodi, Mor Pankh ceilings, Jhomer chandeliers, carved furniture, and customized royal detailing.
+          Interior solutions including Thekri glass, Belgium glass work, marble inlay, and hand-painted wall art.
         </div>
 
       </div>
@@ -1603,12 +1610,12 @@ footer{
         </div>
 
         <h2>
-          Preserving Royal Legacy<br>
-          Through Timeless Heritage.
+          Let's Build Something<br>
+          Worth Preserving.
         </h2>
 
         <p>
-          For heritage homes, villas, hospitality spaces and interiors rooted in traditional Indian craftsmanship.
+          For heritage havelis, villas, hospitality spaces and interiors rooted in traditional Rajasthani craftsmanship.
         </p>
 
         <a href="mailto:rathoreheritagedevelopers@gmail.com" class="cta-button">
@@ -1661,7 +1668,7 @@ footer{
         </h3>
 
         <p>
-          Preserving royal legacy through timeless heritage architecture.
+          Preserving royal legacy through timeless heritage architecture and raw traditional craftsmanship.
         </p>
 
       </div>
@@ -1671,9 +1678,9 @@ footer{
 
         <h4>NAVIGATION</h4>
 
-        <a href="#projects">Signature Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#heritage">Craftsmanship</a>
-        <a href="#details">What We Offer</a>
+        <a href="#details">Services</a>
 
       </div>
 
@@ -1756,7 +1763,6 @@ function closeModal(modalId){
   document.body.style.overflow="";
 }
 
-// Close modal on outside click
 window.addEventListener("click", e => {
   if(e.target.classList.contains("project-modal")){
     e.target.classList.remove("active");
@@ -1833,7 +1839,7 @@ window.addEventListener("scroll",()=>{
 });
 
 
-/* ================= ESCAPE MENU ================= */
+/* ================= ESCAPE MENU / MODAL ================= */
 
 document.addEventListener("keydown",e=>{
 
