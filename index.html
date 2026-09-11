@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rathore Heritage Developers</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brown:#21130d;
+  --brown2:#2d1b12;
+  --cream:#eee6d4;
+  --cream2:#f5efdf;
+  --gold:#b79a69;
+  --line:rgba(33,19,13,.18);
+  --white:#fffaf0;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--cream);
+  color:var(--brown);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.shell{
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1180px,94%);
+  z-index:1000;
+  padding:22px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#fff;
+  mix-blend-mode:normal;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+}
+
+.logo-mark{
+  width:35px;
+  height:35px;
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:16px;
+}
+
+.logo-text{
+  font-size:10px;
+  line-height:1.15;
+  letter-spacing:.15em;
+}
+
+.nav{
+  display:flex;
+  gap:28px;
+  font-size:9px;
+  letter-spacing:.18em;
+}
+
+.nav a{
+  opacity:.9;
+  transition:.3s;
+}
+
+.nav a:hover{
+  opacity:1;
+  color:#d6b77d;
+}
+
+.menu-btn{
+  border:0;
+  background:none;
+  color:#fff;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:9px;
+  letter-spacing:.16em;
+}
+
+.menu-lines{
+  width:30px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.menu-lines span{
+  height:1px;
+  background:#fff;
+  width:100%;
+}
+
+/* ================= MENU ================= */
+
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background:var(--brown);
+  color:var(--cream);
+  z-index:2000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.45s ease;
+}
+
+.menu-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.menu-close{
+  position:absolute;
+  top:30px;
+  right:5%;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:35px;
+  cursor:pointer;
+}
+
+.menu-links{
+  width:min(850px,85%);
+  display:flex;
+  flex-direction:column;
+}
+
+.menu-links a{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(40px,7vw,78px);
+  line-height:.95;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  transition:.3s;
+}
+
+.menu-links a:hover{
+  padding-left:25px;
+  color:#c9ad7c;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:100vh;
+  min-height:680px;
+  position:relative;
+  background:
+    linear-gradient(90deg,rgba(25,12,7,.85),rgba(25,12,7,.15)),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+  padding-bottom:95px;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(20,10,6,.85),transparent 65%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(650px,90%);
+}
+
+.eyebrow{
+  font-size:8px;
+  letter-spacing:.25em;
+  margin-bottom:24px;
+  opacity:.8;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(54px,7vw,92px);
+  line-height:.87;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+
+.hero p{
+  margin-top:25px;
+  max-width:500px;
+  font-size:12px;
+  line-height:1.7;
+  color:rgba(255,255,255,.82);
+}
+
+.hero-actions{
+  margin-top:30px;
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  border:1px solid rgba(255,255,255,.45);
+  padding:14px 20px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:20px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#fff;
+  color:var(--brown);
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+  min-height:760px;
+  padding:130px 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
+  align-items:center;
+}
+
+.intro-image{
+  height:590px;
+  overflow:hidden;
+  border-radius:260px 260px 0 0;
+}
+
+.intro-image img{
+  height:100%;
+  object-fit:cover;
+}
+
+.intro-copy .eyebrow{
+  color:#8e7550;
+}
+
+.intro h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(48px,5vw,72px);
+  line-height:.92;
+  font-weight:500;
+}
+
+.intro p{
+  margin-top:28px;
+  max-width:450px;
+  font-size:12px;
+  line-height:1.9;
+  color:#66584e;
+}
+
+.fade-word{
+  color:rgba(33,19,13,.12);
+}
+
+/* ================= HERITAGE ================= */
+
+.heritage{
+  background:var(--brown);
+  color:var(--cream);
+  padding:125px 0 140px;
+}
+
+.section-head{
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 70px;
+}
+
+.section-head .eyebrow{
+  color:#b89b6a;
+}
+
+.section-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:500;
+  font-size:clamp(48px,6vw,76px);
+  line-height:.9;
+}
+
+.section-head p{
+  margin-top:22px;
+  color:rgba(238,230,212,.68);
+  font-size:11px;
+  line-height:1.7;
+}
+
+.heritage-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.heritage-card{
+  background:#2c1a11;
+  padding:10px 10px 25px;
+}
+
+.heritage-card-image{
+  height:250px;
+  overflow:hidden;
+}
+
+.heritage-card-image img{
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
+.heritage-card:hover img{
+  transform:scale(1.06);
+}
+
+.heritage-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+  font-weight:500;
+  margin:18px 8px 8px;
+}
+
+.heritage-card p{
+  margin:0 8px;
+  font-size:9px;
+  line-height:1.65;
+  color:rgba(238,230,212,.62);
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  padding:130px 0;
+}
+
+.projects-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:60px;
+}
+
+.projects-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,6vw,76px);
+  line-height:.9;
+  font-weight:500;
+}
+
+.projects-head p{
+  max-width:300px;
+  font-size:10px;
+  line-height:1.7;
+  color:#74675d;
+}
+
+.project{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  min-height:620px;
+  margin-bottom:35px;
+  background:#e3d9c5;
+}
+
+.project.reverse{
+  grid-template-columns:.75fr 1.25fr;
+}
+
+.project-image{
+  overflow:hidden;
+}
+
+.project-image img{
+  height:100%;
+  object-fit:cover;
+  transition:transform 1s;
+}
+
+.project:hover .project-image img{
+  transform:scale(1.035);
+}
+
+.project-info{
+  padding:65px 55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.project-info .eyebrow{
+  color:#957b52;
+}
+
+.project-info h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(42px,5vw,70px);
+  line-height:.9;
+  font-weight:500;
+}
+
+.project-info p{
+  margin-top:25px;
+  font-size:11px;
+  line-height:1.8;
+  color:#66584e;
+}
+
+.project-link{
+  margin-top:30px;
+  width:max-content;
+  padding:13px 20px;
+  background:var(--brown);
+  color:#fff;
+  font-size:8px;
+  letter-spacing:.16em;
+}
+
+/* ================= MOSAIC ================= */
+
+.mosaic{
+  background:var(--brown);
+  padding:110px 0;
+}
+
+.mosaic-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:160px;
+  gap:8px;
+}
+
+.mosaic-item{
+  overflow:hidden;
+}
+
+.mosaic-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
+.mosaic-item:hover img{
+  transform:scale(1.07);
+}
+
+.m1{grid-column:span 5;grid-row:span 3}
+.m2{grid-column:span 3;grid-row:span 2}
+.m3{grid-column:span 4;grid-row:span 3}
+.m4{grid-column:span 3;grid-row:span 2}
+.m5{grid-column:span 4;grid-row:span 2}
+.m6{grid-column:span 5;grid-row:span 3}
+.m7{grid-column:span 4;grid-row:span 2}
+.m8{grid-column:span 3;grid-row:span 2}
+
+/* ================= DETAIL LANGUAGE ================= */
+
+.services{
+  padding:130px 0;
+}
+
+.services h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(48px,6vw,78px);
+  line-height:.9;
+  font-weight:500;
+  max-width:700px;
+}
+
+.service-list{
+  margin-top:70px;
+  border-top:1px solid var(--line);
+}
+
+.service{
+  display:grid;
+  grid-template-columns:90px 1fr 1fr;
+  gap:30px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+  align-items:center;
+}
+
+.service-number{
+  color:#a18459;
+  font-size:9px;
+}
+
+.service-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+}
+
+.service-description{
+  font-size:10px;
+  line-height:1.7;
+  color:#74675d;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  background:var(--cream2);
+  padding:110px 0;
+}
+
+.cta-box{
+  background:var(--brown);
+  color:var(--cream);
+  padding:70px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+}
+
+.cta h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,6vw,72px);
+  line-height:.9;
+  font-weight:500;
+}
+
+.cta p{
+  margin-top:20px;
+  max-width:450px;
+  color:rgba(238,230,212,.65);
+  font-size:10px;
+  line-height:1.8;
+}
+
+.cta-button{
+  margin-top:28px;
+  display:inline-flex;
+  padding:14px 22px;
+  background:var(--cream);
+  color:var(--brown);
+  font-size:8px;
+  letter-spacing:.15em;
+}
+
+.contact-details{
+  border-left:1px solid rgba(238,230,212,.15);
+  padding-left:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:25px;
+}
+
+.contact-details div{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.contact-details span:first-child{
+  font-size:8px;
+  letter-spacing:.18em;
+  color:#b99b6a;
+}
+
+.contact-details span:last-child{
+  font-size:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--brown);
+  color:var(--cream);
+  padding:70px 0 30px;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:65px;
+}
+
+.footer-brand h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:28px;
+  font-weight:500;
+}
+
+.footer-brand p{
+  margin-top:15px;
+  max-width:260px;
+  font-size:9px;
+  line-height:1.8;
+  color:rgba(238,230,212,.55);
+}
+
+.footer-col h4{
+  font-size:8px;
+  letter-spacing:.18em;
+  color:#b99b6a;
+  margin-bottom:18px;
+}
+
+.footer-col a{
+  display:block;
+  font-size:9px;
+  color:rgba(238,230,212,.7);
+  margin:9px 0;
+  transition:.3s;
+}
+
+.footer-col a:hover{
+  color:#fff;
+  transform:translateX(4px);
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(238,230,212,.12);
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  font-size:7px;
+  letter-spacing:.13em;
+  color:rgba(238,230,212,.4);
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(45px);
+  transition:opacity .9s ease,transform .9s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+  .nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:650px;
+    padding-bottom:70px;
+  }
+
+  .intro{
+    grid-template-columns:1fr;
+    gap:50px;
+    padding:90px 0;
+  }
+
+  .intro-image{
+    height:480px;
+    order:2;
+  }
+
+  .heritage-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .project,
+  .project.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .project-image{
+    height:430px;
+  }
+
+  .project-info{
+    padding:50px 30px;
+  }
+
+  .projects-head{
+    display:block;
+  }
+
+  .projects-head p{
+    margin-top:25px;
+  }
+
+  .service{
+    grid-template-columns:45px 1fr;
+  }
+
+  .service-description{
+    grid-column:2;
+  }
+
+  .cta-box{
+    grid-template-columns:1fr;
+    padding:45px 30px;
+    gap:45px;
+  }
+
+  .contact-details{
+    border-left:0;
+    border-top:1px solid rgba(238,230,212,.15);
+    padding-left:0;
+    padding-top:35px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .mosaic-grid{
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:180px;
+  }
+
+  .m1,.m2,.m3,.m4,.m5,.m6,.m7,.m8{
+    grid-column:span 1;
+    grid-row:span 1;
+  }
+}
+
+@media(max-width:520px){
+
+  .header{
+    padding-top:18px;
+  }
+
+  .logo-text{
+    font-size:8px;
+  }
+
+  .hero h1{
+    font-size:55px;
+  }
+
+  .heritage-grid{
+    grid-template-columns:1fr;
+  }
+
+  .heritage-card-image{
+    height:300px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= MENU ================= -->
+
+<div class="menu-overlay" id="menuOverlay">
+
+  <button class="menu-close" id="menuClose">×</button>
+
+  <nav class="menu-links">
+    <a href="#home">Home</a>
+    <a href="#story">Brand Story</a>
+    <a href="#heritage">Craftsmanship</a>
+    <a href="#projects">Projects</a>
+    <a href="#details">Detail Language</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+  <a href="#home" class="logo">
+    <div class="logo-mark">R</div>
+    <div class="logo-text">
+      RATHORE<br>
+      HERITAGE DEVELOPERS
+    </div>
+  </a>
+
+  <nav class="nav">
+    <a href="#projects">PROJECTS</a>
+    <a href="#heritage">CRAFTSMANSHIP</a>
+    <a href="#details">SERVICES</a>
+  </nav>
+
+  <button class="menu-btn" id="menuBtn">
+    MENU
+    <span class="menu-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="shell hero-content reveal">
+
+    <div class="eyebrow">
+      Craftsmanship · Heritage Construction · Luxury Interiors
+    </div>
+
+    <h1>
+      Where Timeless<br>
+      Indian Heritage<br>
+      Meets Royal Living.
+    </h1>
+
+    <p>
+      Heritage construction and luxury spaces shaped by
+      traditional Rajasthani craftsmanship.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn">
+        Explore Our Work <span>→</span>
+      </a>
+
+      <a href="#heritage" class="btn">
+        Our Craftsmanship <span>→</span>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BRAND STORY ================= -->
+
+<section class="intro shell" id="story">
+
+  <div class="intro-image reveal">
+
+    <img
+      src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1100&q=85"
+      alt="Heritage Interior"
+    >
+
+  </div>
+
+  <div class="intro-copy reveal">
+
+    <div class="eyebrow">
+      Brand Story
+    </div>
+
+    <h2>
+      Built by Hand.<br>
+      Designed to Endure.
+    </h2>
+
+    <p>
+      Rathore Heritage Developers creates authentic heritage
+      construction and luxury spaces rooted in traditional
+      Indian craftsmanship.
+    </p>
+
+    <p>
+      Every space is conceived as a dialogue between
+      architecture, material, detail and regional identity.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ART OF HERITAGE ================= -->
+
+<section class="heritage" id="heritage">
+
+  <div class="shell">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        Craftsmanship
+      </div>
+
+      <h2>
+        The Art of Heritage
+      </h2>
+
+      <p>
+        Individual traditions are composed as architectural
+        experiences — crafted, engineered and layered with restraint.
+      </p>
+
+    </div>
+
+
+    <div class="heritage-grid">
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Heritage Door Entrances
+        </h3>
+
+        <p>
+          Thresholds shaped on ceremonial arrivals,
+          framed with proportion and detail.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Thekri Glass Work
+        </h3>
+
+        <p>
+          Reflective fragments and luminous surfaces
+          composed with a heritage hand.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Mor Panchi Ceiling Art
+        </h3>
+
+        <p>
+          Peacock-inspired motifs translated into
+          refined overhead storytelling.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Fine Patta & Tokri Detailing
+        </h3>
+
+        <p>
+          Fine edge details that give walls, ceilings
+          and openings their character.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Jharokha-Style Doors
+        </h3>
+
+        <p>
+          Deeply detailed openings bringing
+          traditional character into modern spaces.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Carved Heritage Furniture
+        </h3>
+
+        <p>
+          Furniture conceived as architecture
+          at human scale.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Mughal Chandeliers
+        </h3>
+
+        <p>
+          Light treated as atmosphere, texture
+          and material warmth.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85">
+        </div>
+
+        <h3>
+          Marble & Khajur Patti
+        </h3>
+
+        <p>
+          Stone, line and repetition refined
+          into quiet luxury.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+  <div class="shell">
+
+    <div class="projects-head reveal">
+
+      <div>
+        <div class="eyebrow">
+          Selected Projects
+        </div>
+
+        <h2>
+          Spaces with<br>
+          a Story.
+        </h2>
+      </div>
+
+      <p>
+        From private residences to hospitality environments,
+        every project is rooted in materiality, craft and place.
+      </p>
+
+    </div>
+
+
+    <!-- OLADAR HAVELI -->
+
+    <article class="project reveal">
+
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1500&q=85">
+      </div>
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Heritage Haveli Construction
+        </div>
+
+        <h3>
+          Oladar<br>
+          Haveli
+        </h3>
+
+        <p>
+          A heritage haveli lounge composed through carved
+          detail, angled surfaces and engineered permanence.
+        </p>
+
+        <a href="#gallery" class="project-link">
+          View Project →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ROOP MAHAL -->
+
+    <article class="project reverse reveal">
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Luxury Heritage Hotel
+        </div>
+
+        <h3>
+          Roop<br>
+          Mahal
+        </h3>
+
+        <p>
+          A villa experience shaped around royal proportion,
+          texture and refined hospitality.
+        </p>
+
+        <a href="#gallery" class="project-link">
+          View Project →
+        </a>
+
+      </div>
+
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85">
+      </div>
+
+    </article>
+
+
+    <!-- MOHAN VILLA -->
+
+    <article class="project reveal">
+
+      <div class="project-image">
+
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1500&q=85">
+
+      </div>
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Heritage Style Villa
+        </div>
+
+        <h3>
+          Mohan<br>
+          Villa
+        </h3>
+
+        <p>
+          A farmhouse vocabulary elevated through heritage
+          planning and hand-finished detail.
+        </p>
+
+        <a href="#gallery" class="project-link">
+          View Project →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- FIRST IMPRESSION SALON -->
+
+    <article class="project reverse reveal">
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Premium Commercial Interior
+        </div>
+
+        <h3>
+          First Impression<br>
+          Salon
+        </h3>
+
+        <p>
+          Commercial interiors with premium heritage
+          sensibility and tactile identity.
+        </p>
+
+        <a href="#gallery" class="project-link">
+          View Project →
+        </a>
+
+      </div>
+
+      <div class="project-image">
+
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85">
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= IMAGE LANGUAGE ================= -->
+
+<section class="mosaic" id="gallery">
+
+  <div class="shell">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        Detail Language
+      </div>
+
+      <h2>
+        Made to be Seen.
+      </h2>
+
+      <p>
+        A closer look at the details, materials and
+        atmosphere that define our spaces.
+      </p>
+
+    </div>
+
+
+    <div class="mosaic-grid">
+
+      <div class="mosaic-item m1 reveal">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85">
+      </div>
+
+      <div class="mosaic-item m2 reveal">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85">
+      </div>
+
+      <div class="mosaic-item m3 reveal">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85">
+      </div>
+
+      <div class="mosaic-item m4 reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85">
+      </div>
+
+      <div class="mosaic-item m5 reveal">
+        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=85">
+      </div>
+
+      <div class="mosaic-item m6 reveal">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85">
+      </div>
+
+      <div class="mosaic-item m7 reveal">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85">
+      </div>
+
+      <div class="mosaic-item m8 reveal">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="details">
+
+  <div class="shell">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        Our Capabilities
+      </div>
+
+      <h2>
+        Heritage spaces, built with the discipline
+        of architecture and the patience of craft.
+      </h2>
+
+    </div>
+
+
+    <div class="service-list">
+
+      <div class="service reveal">
+
+        <div class="service-number">01</div>
+
+        <div class="service-name">
+          Heritage Haveli Construction
+        </div>
+
+        <div class="service-description">
+          Authentic haveli planning, entrances, domes,
+          painted detail and durable engineering.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">02</div>
+
+        <div class="service-name">
+          Luxury Heritage Villas
+        </div>
+
+        <div class="service-description">
+          Royal living translated into contemporary
+          homes with warmth, craft and proportion.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">03</div>
+
+        <div class="service-name">
+          Palace-Style Farmhouse Development
+        </div>
+
+        <div class="service-description">
+          Expansive private retreats with a heritage
+          hospitality spirit and grounded materiality.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">04</div>
+
+        <div class="service-name">
+          Heritage Hotels & Resort Development
+        </div>
+
+        <div class="service-description">
+          Hospitality environments rooted in regional
+          identity, craft and memorable arrival experiences.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">05</div>
+
+        <div class="service-name">
+          Luxury Interior Craftsmanship
+        </div>
+
+        <div class="service-description">
+          Bespoke interiors combining stone, wood,
+          metal, glass and traditional detailing.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta" id="contact">
+
+  <div class="shell">
+
+    <div class="cta-box reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          Begin a Conversation
+        </div>
+
+        <h2>
+          Let's Build Something<br>
+          Worth Preserving.
+        </h2>
+
+        <p>
+          For heritage homes, villas, hospitality spaces and
+          interiors rooted in traditional Indian craftsmanship.
+        </p>
+
+        <a href="mailto:your@email.com" class="cta-button">
+          Start a Conversation →
+        </a>
+
+      </div>
+
+
+      <div class="contact-details">
+
+        <div>
+          <span>EMAIL</span>
+          <span>YOUR@EMAIL.COM</span>
+        </div>
+
+        <div>
+          <span>PHONE</span>
+          <span>+91 00000 00000</span>
+        </div>
+
+        <div>
+          <span>LOCATION</span>
+          <span>UDAIPUR, RAJASTHAN</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="shell">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <h3>
+          Rathore Heritage Developers
+        </h3>
+
+        <p>
+          Heritage construction and luxury interiors
+          rooted in traditional Indian craftsmanship.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>NAVIGATION</h4>
+
+        <a href="#projects">Projects</a>
+        <a href="#heritage">Craftsmanship</a>
+        <a href="#details">Services</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>CONTACT</h4>
+
+        <a href="mailto:your@email.com">Email</a>
+        <a href="tel:+910000000000">Phone</a>
+        <a href="#contact">Enquiry</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>SOCIAL</h4>
+
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#">WhatsApp</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © RATHORE HERITAGE DEVELOPERS · UDAIPUR, RAJASTHAN
+      </span>
+
+      <span>
+        CRAFTED WITH HERITAGE & RESTRAINT
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* ================= MENU ================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+const menuClose = document.getElementById("menuClose");
+
+menuBtn.addEventListener("click",()=>{
+  menuOverlay.classList.add("active");
+  document.body.style.overflow="hidden";
+});
+
+menuClose.addEventListener("click",()=>{
+  menuOverlay.classList.remove("active");
+  document.body.style.overflow="";
+});
+
+document.querySelectorAll(".menu-links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow="";
+  });
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer = new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold:.12
+  }
+);
+
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
+
+
+/* ================= MAGNETIC BUTTON EFFECT ================= */
+
+document.querySelectorAll(".btn,.project-link,.cta-button").forEach(btn=>{
+
+  btn.addEventListener("mousemove",e=>{
+
+    const rect=btn.getBoundingClientRect();
+
+    const x=(e.clientX-rect.left-rect.width/2)*.08;
+    const y=(e.clientY-rect.top-rect.height/2)*.08;
+
+    btn.style.transform=`translate(${x}px,${y}px)`;
+
+  });
+
+  btn.addEventListener("mouseleave",()=>{
+    btn.style.transform="";
+  });
+
+});
+
+
+/* ================= HEADER BACKGROUND ================= */
+
+window.addEventListener("scroll",()=>{
+
+  const header=document.querySelector(".header");
+
+  if(window.scrollY>80){
+
+    header.style.background="rgba(33,19,13,.92)";
+    header.style.padding="13px 20px";
+    header.style.borderRadius="0 0 8px 8px";
+    header.style.backdropFilter="blur(12px)";
+
+  }else{
+
+    header.style.background="transparent";
+    header.style.padding="22px 0";
+    header.style.borderRadius="";
+    header.style.backdropFilter="";
+
+  }
+
+});
+
+
+/* ================= ESCAPE MENU ================= */
+
+document.addEventListener("keydown",e=>{
+
+  if(e.key==="Escape"){
+
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow="";
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
