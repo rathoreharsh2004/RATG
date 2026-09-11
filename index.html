@@ -3,45 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rathore Heritage Developers — Rajasthan Heritage Craftsmanship</title>
-
-<meta name="description"
-content="Rathore Heritage Developers — authentic Rajasthan heritage construction, royal interiors, traditional craftsmanship, havelis, villas and heritage spaces.">
+<title>Rathore Heritage Developers</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Screenshot typography -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================================
-   RATHORE HERITAGE DEVELOPERS
-   ALL-IN-ONE HTML
-   ========================================================= */
-
 :root{
-  --brown:#24150e;
-  --brown-dark:#160b07;
-  --brown-soft:#321d13;
-
-  --cream:#eee5d4;
-  --cream-light:#f6efdf;
-  --cream-dark:#d8ccb7;
-
-  --gold:#b28a4b;
-  --gold-light:#c9aa70;
-
-  --text:#2a1a12;
-  --muted:#796b5d;
-
-  --line:rgba(36,21,14,.17);
+  --brown:#21130d;
+  --brown2:#2d1b12;
+  --cream:#eee6d4;
+  --cream2:#f5efdf;
+  --gold:#b79a69;
+  --line:rgba(33,19,13,.18);
   --white:#fffaf0;
-
-  --serif:"Cormorant Garamond",serif;
-  --sans:"DM Sans",sans-serif;
 }
 
 *{
@@ -56,13 +32,9 @@ html{
 
 body{
   background:var(--cream);
-  color:var(--text);
-  font-family:var(--sans);
+  color:var(--brown);
+  font-family:"DM Sans",sans-serif;
   overflow-x:hidden;
-}
-
-body.detail-open{
-  overflow:hidden;
 }
 
 img{
@@ -71,62 +43,20 @@ img{
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
 }
 
 button{
-  font-family:inherit;
+  font:inherit;
 }
 
 .shell{
-  width:min(1180px,92%);
-  margin:0 auto;
+  width:min(1180px,90%);
+  margin:auto;
 }
 
-/* =========================================================
-   LOADER
-   ========================================================= */
-
-.loader{
-  position:fixed;
-  inset:0;
-  background:var(--brown-dark);
-  color:var(--cream);
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:.7s ease;
-}
-
-.loader.hide{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-}
-
-.loader-box{
-  text-align:center;
-}
-
-.loader-box span{
-  display:block;
-  font-size:8px;
-  letter-spacing:.3em;
-  color:var(--gold-light);
-  margin-bottom:14px;
-}
-
-.loader-box strong{
-  font-family:var(--serif);
-  font-size:60px;
-  font-weight:400;
-}
-
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* ================= HEADER ================= */
 
 .header{
   position:fixed;
@@ -134,115 +64,66 @@ button{
   left:50%;
   transform:translateX(-50%);
   width:min(1180px,94%);
-  z-index:500;
-  padding:18px 0;
+  z-index:1000;
+  padding:22px 0;
   display:flex;
   align-items:center;
   justify-content:space-between;
   color:#fff;
-  transition:.4s ease;
-}
-
-.header.scrolled{
-  width:min(1180px,92%);
-  padding:11px 18px;
-  background:rgba(36,21,14,.93);
-  backdrop-filter:blur(16px);
-  border-radius:0 0 8px 8px;
+  mix-blend-mode:normal;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:11px;
+  gap:10px;
+  color:#fff;
 }
 
-.logo img{
-  width:48px;
-  height:48px;
-  object-fit:contain;
-}
-
-.logo-fallback{
-  display:none;
-  width:44px;
-  height:44px;
+.logo-mark{
+  width:35px;
+  height:35px;
   border:1px solid rgba(255,255,255,.65);
   border-radius:50%;
-  align-items:center;
-  justify-content:center;
-  font-family:var(--serif);
-  font-size:22px;
+  display:grid;
+  place-items:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:16px;
 }
 
-.logo span{
-  font-size:8px;
+.logo-text{
+  font-size:10px;
   line-height:1.15;
+  letter-spacing:.15em;
+}
+
+.nav{
+  display:flex;
+  gap:28px;
+  font-size:9px;
   letter-spacing:.18em;
-  color:#fff;
 }
 
-.header nav{
-  display:flex;
-  align-items:center;
-  gap:27px;
-}
-
-.header nav a{
-  color:#fff;
-  font-size:8px;
-  letter-spacing:.17em;
+.nav a{
+  opacity:.9;
   transition:.3s;
 }
 
-.header nav a:hover{
-  color:var(--gold-light);
-}
-
-.head-actions{
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-
-.mini-btn{
-  height:40px;
-  padding:0 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:22px;
-  font-size:8px;
-  letter-spacing:.12em;
-  transition:.3s;
-}
-
-.mini-btn.dark{
-  background:#292522;
-  color:#fff;
-}
-
-.mini-btn.gold{
-  background:#e0c000;
-  color:#15100a;
-}
-
-.mini-btn:hover{
-  transform:translateY(-2px);
+.nav a:hover{
+  opacity:1;
+  color:#d6b77d;
 }
 
 .menu-btn{
-  height:40px;
-  padding:0 12px;
   border:0;
-  background:transparent;
+  background:none;
   color:#fff;
   cursor:pointer;
   display:flex;
   align-items:center;
-  gap:12px;
-  font-size:8px;
-  letter-spacing:.15em;
+  gap:10px;
+  font-size:9px;
+  letter-spacing:.16em;
 }
 
 .menu-lines{
@@ -253,27 +134,25 @@ button{
 }
 
 .menu-lines span{
-  width:100%;
   height:1px;
   background:#fff;
+  width:100%;
 }
 
-/* =========================================================
-   FULL MENU
-   ========================================================= */
+/* ================= MENU ================= */
 
 .menu-overlay{
   position:fixed;
   inset:0;
-  z-index:3000;
-  background:var(--brown-dark);
+  background:var(--brown);
   color:var(--cream);
-  opacity:0;
-  visibility:hidden;
-  transition:.45s ease;
+  z-index:2000;
   display:flex;
   align-items:center;
   justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.45s ease;
 }
 
 .menu-overlay.active{
@@ -283,489 +162,257 @@ button{
 
 .menu-close{
   position:absolute;
-  top:25px;
+  top:30px;
   right:5%;
   border:0;
   background:none;
   color:#fff;
-  font-size:38px;
+  font-size:35px;
   cursor:pointer;
 }
 
-.menu-inner{
-  width:min(850px,88%);
-}
-
-.menu-small{
-  color:var(--gold-light);
-  font-size:8px;
-  letter-spacing:.25em;
-  margin-bottom:30px;
-}
-
 .menu-links{
+  width:min(850px,85%);
   display:flex;
   flex-direction:column;
 }
 
 .menu-links a{
-  font-family:var(--serif);
-  font-size:clamp(42px,6vw,75px);
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(40px,7vw,78px);
   line-height:.95;
   padding:10px 0;
   border-bottom:1px solid rgba(255,255,255,.12);
-  transition:.35s;
+  transition:.3s;
 }
 
 .menu-links a:hover{
-  color:var(--gold-light);
-  padding-left:20px;
+  padding-left:25px;
+  color:#c9ad7c;
 }
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* ================= HERO ================= */
 
 .hero{
-  min-height:100vh;
+  height:100vh;
+  min-height:680px;
   position:relative;
+  background:
+    linear-gradient(90deg,rgba(25,12,7,.85),rgba(25,12,7,.15)),
+    url("https://images.unsplash.com/photo-1599661046862-2d4837bac10c?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  color:#fff;
   display:flex;
   align-items:flex-end;
-  padding-bottom:90px;
-  color:#fff;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(24,11,6,.84),rgba(24,11,6,.24)),
-    url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90")
-    center/cover;
+  padding-bottom:95px;
 }
 
 .hero:after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    0deg,
-    rgba(15,7,4,.88),
-    rgba(15,7,4,.1) 68%,
-    rgba(15,7,4,.35)
-  );
+  background:linear-gradient(0deg,rgba(20,10,6,.85),transparent 65%);
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:760px;
+  width:min(650px,90%);
 }
 
-.kicker{
+.eyebrow{
   font-size:8px;
-  letter-spacing:.3em;
-  color:var(--gold-light);
-  margin-bottom:23px;
-}
-
-.hero h1{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(58px,8vw,105px);
-  line-height:.84;
-  letter-spacing:-.035em;
-}
-
-.hero h1 em{
-  color:var(--cream);
-  font-style:normal;
-}
-
-.hero-copy{
-  margin-top:28px;
-  max-width:570px;
-  color:rgba(255,255,255,.76);
-  font-size:11px;
-  line-height:1.8;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:10px;
-  margin-top:28px;
-}
-
-.action{
-  min-height:44px;
-  padding:0 20px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-  font-size:8px;
-  letter-spacing:.16em;
-  transition:.3s;
-}
-
-.action.gold{
-  background:var(--gold-light);
-  color:var(--brown-dark);
-}
-
-.action.outline{
-  border:1px solid rgba(255,255,255,.5);
-  color:#fff;
-}
-
-.action:hover{
-  transform:translateY(-3px);
-}
-
-.hero-bottom{
-  position:absolute;
-  z-index:2;
-  left:0;
-  right:0;
-  bottom:25px;
-  display:flex;
-  justify-content:space-between;
-  color:rgba(255,255,255,.6);
-  font-size:7px;
-  letter-spacing:.18em;
-}
-
-.hero-bottom span:first-child{
-  display:flex;
-  gap:12px;
-}
-
-.hero-bottom b{
-  color:#fff;
-}
-
-.hero-bottom small{
-  font-size:7px;
-}
-
-/* =========================================================
-   SECTION COMMON
-   ========================================================= */
-
-.section-no{
-  font-size:8px;
-  letter-spacing:.22em;
-  color:#9b7b4d;
+  letter-spacing:.25em;
+  margin-bottom:24px;
+  opacity:.8;
   text-transform:uppercase;
 }
 
-.section-head{
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(54px,7vw,92px);
+  line-height:.87;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+
+.hero p{
+  margin-top:25px;
+  max-width:500px;
+  font-size:12px;
+  line-height:1.7;
+  color:rgba(255,255,255,.82);
+}
+
+.hero-actions{
+  margin-top:30px;
   display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:50px;
-  margin-bottom:65px;
+  gap:10px;
 }
 
-.section-head h2{
-  margin-top:15px;
-  font-family:var(--serif);
-  font-size:clamp(50px,6vw,78px);
-  line-height:.88;
-  font-weight:400;
-  letter-spacing:-.025em;
-}
-
-.section-head h2 span{
-  color:var(--gold);
-}
-
-.section-head > p{
-  max-width:360px;
-  font-size:10px;
-  line-height:1.8;
-  color:var(--muted);
-}
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
-.about{
-  padding:125px 0 120px;
-}
-
-.about-top{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  margin-bottom:70px;
-}
-
-.about-line{
-  flex:1;
-  height:1px;
-  background:var(--line);
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:90px;
-  align-items:center;
-}
-
-.about-grid h2{
-  font-family:var(--serif);
-  font-size:clamp(50px,6vw,80px);
-  line-height:.88;
-  font-weight:400;
-}
-
-.about-grid h2 em{
-  color:var(--gold);
-  font-style:normal;
-}
-
-.about-copy p{
-  font-size:11px;
-  line-height:1.9;
-  color:#66584c;
-  margin-bottom:18px;
-}
-
-.about-link{
-  margin-top:14px;
+.btn{
+  border:1px solid rgba(255,255,255,.45);
+  padding:14px 20px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
   display:inline-flex;
   align-items:center;
-  gap:28px;
-  background:var(--brown);
-  color:#fff;
-  padding:14px 19px;
-  font-size:8px;
-  letter-spacing:.17em;
-}
-
-.about-image{
-  height:600px;
-  margin-top:80px;
-  overflow:hidden;
-  position:relative;
-}
-
-.about-image img{
-  height:100%;
-  object-fit:cover;
-  transition:1s;
-}
-
-.about-image:hover img{
-  transform:scale(1.035);
-}
-
-.about-image:after{
-  content:"RAJASTHAN · CRAFT · HERITAGE";
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  font-size:7px;
-  letter-spacing:.22em;
-  color:#fff;
-}
-
-/* =========================================================
-   HERITAGE STATEMENT
-   ========================================================= */
-
-.statement{
-  background:var(--brown);
-  color:var(--cream);
-  padding:130px 0;
-}
-
-.statement-inner{
-  max-width:1000px;
-  margin:auto;
-  text-align:center;
-}
-
-.statement h2{
-  margin-top:25px;
-  font-family:var(--serif);
-  font-size:clamp(52px,7vw,90px);
-  line-height:.88;
-  font-weight:400;
-}
-
-.statement h2 span{
-  color:var(--gold-light);
-}
-
-.statement p{
-  max-width:680px;
-  margin:30px auto 0;
-  font-size:11px;
-  line-height:1.9;
-  color:rgba(238,229,212,.67);
-}
-
-/* =========================================================
-   HERITAGE EXPERTISE
-   ========================================================= */
-
-.expertise{
-  padding:130px 0;
-}
-
-.expertise-intro{
-  max-width:650px;
-  margin-bottom:70px;
-}
-
-.expertise-intro h2{
-  font-family:var(--serif);
-  font-size:clamp(52px,6vw,80px);
-  line-height:.88;
-  font-weight:400;
-  margin-top:15px;
-}
-
-.expertise-intro p{
-  margin-top:25px;
-  font-size:11px;
-  line-height:1.85;
-  color:var(--muted);
-}
-
-.expertise-list{
-  border-top:1px solid var(--line);
-}
-
-.expertise-item{
-  display:grid;
-  grid-template-columns:70px 1fr 1fr;
-  gap:30px;
-  padding:28px 0;
-  border-bottom:1px solid var(--line);
-  align-items:start;
+  gap:20px;
   transition:.3s;
 }
 
-.expertise-item:hover{
-  padding-left:10px;
+.btn:hover{
+  background:#fff;
+  color:var(--brown);
 }
 
-.expertise-number{
-  color:var(--gold);
-  font-size:9px;
-  letter-spacing:.1em;
-}
+/* ================= INTRO ================= */
 
-.expertise-name{
-  font-family:var(--serif);
-  font-size:27px;
-  line-height:1;
-}
-
-.expertise-desc{
-  font-size:10px;
-  line-height:1.75;
-  color:var(--muted);
-}
-
-.expertise-tags{
-  grid-column:2 / 4;
-  margin-top:-15px;
-  font-size:9px;
-  line-height:1.8;
-  color:#8a755d;
-}
-
-/* =========================================================
-   APPROACH
-   ========================================================= */
-
-.approach{
-  background:var(--brown-soft);
-  color:var(--cream);
-  padding:120px 0;
-}
-
-.approach-grid{
+.intro{
+  min-height:760px;
+  padding:130px 0;
   display:grid;
-  grid-template-columns:.8fr 1.2fr;
+  grid-template-columns:1fr 1fr;
   gap:100px;
   align-items:center;
 }
 
-.approach h2{
-  font-family:var(--serif);
-  font-size:clamp(50px,6vw,80px);
-  font-weight:400;
-  line-height:.88;
+.intro-image{
+  height:590px;
+  overflow:hidden;
+  border-radius:260px 260px 0 0;
 }
 
-.approach h2 span{
-  color:var(--gold-light);
+.intro-image img{
+  height:100%;
+  object-fit:cover;
 }
 
-.approach-copy p{
-  font-size:11px;
+.intro-copy .eyebrow{
+  color:#8e7550;
+}
+
+.intro h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(48px,5vw,72px);
+  line-height:.92;
+  font-weight:500;
+}
+
+.intro p{
+  margin-top:28px;
+  max-width:450px;
+  font-size:12px;
   line-height:1.9;
-  color:rgba(238,229,212,.7);
+  color:#66584e;
 }
 
-.approach-points{
-  margin-top:35px;
+/* ================= HERITAGE ================= */
+
+.heritage{
+  background:var(--brown);
+  color:var(--cream);
+  padding:125px 0 140px;
+}
+
+.section-head{
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 70px;
+}
+
+.section-head .eyebrow{
+  color:#b89b6a;
+}
+
+.section-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:500;
+  font-size:clamp(48px,6vw,76px);
+  line-height:.9;
+}
+
+.section-head p{
+  margin-top:22px;
+  color:rgba(238,230,212,.68);
+  font-size:11px;
+  line-height:1.7;
+}
+
+.heritage-grid{
   display:grid;
+  grid-template-columns:repeat(4,1fr);
   gap:12px;
 }
 
-.approach-point{
-  padding-bottom:12px;
-  border-bottom:1px solid rgba(238,229,212,.13);
-  font-family:var(--serif);
-  font-size:22px;
+.heritage-card{
+  background:#2c1a11;
+  padding:10px 10px 25px;
 }
 
-.approach-point span{
-  color:var(--gold-light);
+.heritage-card-image{
+  height:250px;
+  overflow:hidden;
 }
 
-/* =========================================================
-   SELECTED PROJECTS
-   ========================================================= */
+.heritage-card-image img{
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
+.heritage-card:hover img{
+  transform:scale(1.06);
+}
+
+.heritage-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+  font-weight:500;
+  margin:18px 8px 8px;
+}
+
+.heritage-card p{
+  margin:0 8px;
+  font-size:9px;
+  line-height:1.65;
+  color:rgba(238,230,212,.62);
+}
+
+/* ================= PROJECTS ================= */
 
 .projects{
   padding:130px 0;
 }
 
-.projects-heading{
-  margin-bottom:75px;
+.projects-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:60px;
 }
 
-.projects-heading h2{
-  font-family:var(--serif);
-  font-size:clamp(52px,7vw,90px);
-  line-height:.85;
-  font-weight:400;
+.projects-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,6vw,76px);
+  line-height:.9;
+  font-weight:500;
 }
 
-.projects-heading h2 span{
-  color:var(--gold);
-}
-
-.projects-heading p{
-  max-width:530px;
-  margin-top:25px;
-  font-size:11px;
-  line-height:1.8;
-  color:var(--muted);
+.projects-head p{
+  max-width:300px;
+  font-size:10px;
+  line-height:1.7;
+  color:#74675d;
 }
 
 .project{
   display:grid;
   grid-template-columns:1.25fr .75fr;
-  min-height:650px;
-  background:#e2d7c2;
-  margin-bottom:30px;
-  overflow:hidden;
+  min-height:620px;
+  margin-bottom:35px;
+  background:#e3d9c5;
 }
 
 .project.reverse{
@@ -773,16 +420,13 @@ button{
 }
 
 .project-image{
-  min-height:650px;
   overflow:hidden;
-  position:relative;
 }
 
 .project-image img{
-  width:100%;
   height:100%;
   object-fit:cover;
-  transition:1s ease;
+  transition:transform 1s;
 }
 
 .project:hover .project-image img{
@@ -796,556 +440,334 @@ button{
   justify-content:center;
 }
 
-.project-info .project-no{
-  color:#9a7749;
-  font-size:8px;
-  letter-spacing:.22em;
-  margin-bottom:17px;
+.project-info .eyebrow{
+  color:#957b52;
 }
 
 .project-info h3{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(48px,5vw,73px);
-  line-height:.85;
-}
-
-.project-info .project-type{
-  margin-top:18px;
-  font-size:8px;
-  letter-spacing:.16em;
-  color:#856b4d;
-  text-transform:uppercase;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(42px,5vw,70px);
+  line-height:.9;
+  font-weight:500;
 }
 
 .project-info p{
-  max-width:430px;
   margin-top:25px;
-  font-size:10px;
-  line-height:1.85;
-  color:#66584c;
+  font-size:11px;
+  line-height:1.8;
+  color:#66584e;
 }
 
-.project-view{
+.project-link{
   margin-top:30px;
   width:max-content;
+  padding:13px 20px;
   background:var(--brown);
   color:#fff;
-  padding:14px 20px;
   font-size:8px;
-  letter-spacing:.15em;
-  display:inline-flex;
-  align-items:center;
-  gap:28px;
+  letter-spacing:.16em;
   cursor:pointer;
   border:0;
 }
 
-/* =========================================================
-   PROJECT DETAIL VIEW
-   ========================================================= */
+/* ================= PROJECT MODAL ================= */
 
-.project-detail{
+.project-modal{
   position:fixed;
   inset:0;
-  z-index:6000;
-  background:var(--cream);
-  overflow-y:auto;
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  transition:.45s ease;
-}
-
-.project-detail.active{
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-}
-
-.detail-topbar{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(36,21,14,.96);
-  color:#fff;
+  background:rgba(21,11,7,.92);
+  z-index:3000;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding:17px 4%;
-  backdrop-filter:blur(15px);
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.4s ease;
+  backdrop-filter:blur(8px);
 }
 
-.detail-brand{
-  font-size:8px;
-  letter-spacing:.2em;
+.project-modal.active{
+  opacity:1;
+  visibility:visible;
 }
 
-.detail-close{
-  border:1px solid rgba(255,255,255,.35);
-  background:transparent;
-  color:#fff;
-  padding:10px 17px;
+.modal-content{
+  background:var(--cream);
+  color:var(--brown);
+  width:min(950px, 92%);
+  max-height:85vh;
+  overflow-y:auto;
+  padding:50px;
+  position:relative;
+  border-radius:4px;
+}
+
+.modal-close{
+  position:absolute;
+  top:20px;
+  right:25px;
+  background:none;
+  border:0;
+  font-size:32px;
   cursor:pointer;
-  font-size:8px;
-  letter-spacing:.14em;
+  color:var(--brown);
 }
 
-.detail-content{
-  width:min(1180px,92%);
-  margin:auto;
-  padding:90px 0 120px;
+.modal-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(36px, 5vw, 56px);
+  line-height:1;
+  margin-bottom:10px;
 }
 
-.detail-kicker{
-  color:#9c7848;
-  font-size:8px;
-  letter-spacing:.25em;
-  margin-bottom:18px;
-}
-
-.detail-title{
-  font-family:var(--serif);
-  font-size:clamp(60px,9vw,110px);
-  line-height:.82;
-  font-weight:400;
-}
-
-.detail-location{
-  margin-top:20px;
-  font-size:8px;
-  letter-spacing:.17em;
-  color:#8a725a;
+.modal-location{
+  font-size:9px;
+  letter-spacing:.2em;
+  color:#957b52;
   text-transform:uppercase;
+  margin-bottom:20px;
 }
 
-.detail-hero{
-  height:650px;
-  margin-top:65px;
+.modal-desc{
+  font-size:11px;
+  line-height:1.8;
+  color:#66584e;
+  margin-bottom:30px;
+}
+
+.modal-gallery{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:15px;
+}
+
+.modal-img-wrap{
+  height:280px;
   overflow:hidden;
 }
 
-.detail-hero img{
-  width:100%;
+.modal-img-wrap img{
   height:100%;
   object-fit:cover;
+  transition:.5s;
 }
 
-.detail-description{
-  display:grid;
-  grid-template-columns:.7fr 1.3fr;
-  gap:90px;
-  padding:90px 0;
+.modal-img-wrap img:hover{
+  transform:scale(1.04);
 }
 
-.detail-description h3{
-  font-family:var(--serif);
-  font-size:45px;
-  line-height:.9;
-  font-weight:400;
-}
+/* ================= MOSAIC ================= */
 
-.detail-description p{
-  font-size:11px;
-  line-height:1.95;
-  color:#66584c;
-  margin-bottom:18px;
-}
-
-.detail-features{
+.mosaic{
   background:var(--brown);
-  color:var(--cream);
-  padding:75px 7%;
+  padding:110px 0;
 }
 
-.detail-features h3{
-  font-family:var(--serif);
-  font-size:52px;
-  font-weight:400;
-  margin-bottom:40px;
-}
-
-.feature-list{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:0;
-}
-
-.feature{
-  border-top:1px solid rgba(238,229,212,.13);
-  padding:20px 0;
-  font-size:10px;
-  color:rgba(238,229,212,.75);
-}
-
-.detail-gallery{
-  padding:90px 0 0;
-}
-
-.detail-gallery h3{
-  font-family:var(--serif);
-  font-size:55px;
-  font-weight:400;
-  margin-bottom:45px;
-}
-
-.detail-gallery-grid{
+.mosaic-grid{
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-auto-rows:180px;
+  grid-auto-rows:160px;
   gap:8px;
 }
 
-.detail-gallery-grid .gallery-image{
+.mosaic-item{
   overflow:hidden;
 }
 
-.detail-gallery-grid .gallery-image img{
+.mosaic-item img{
+  width:100%;
   height:100%;
   object-fit:cover;
-  transition:.7s;
+  transition:transform .7s;
 }
 
-.detail-gallery-grid .gallery-image:hover img{
-  transform:scale(1.05);
+.mosaic-item:hover img{
+  transform:scale(1.07);
 }
 
-.detail-gallery-grid .large{
-  grid-column:span 7;
-  grid-row:span 3;
+.m1{grid-column:span 5;grid-row:span 3}
+.m2{grid-column:span 3;grid-row:span 2}
+.m3{grid-column:span 4;grid-row:span 3}
+.m4{grid-column:span 3;grid-row:span 2}
+.m5{grid-column:span 4;grid-row:span 2}
+.m6{grid-column:span 5;grid-row:span 3}
+.m7{grid-column:span 4;grid-row:span 2}
+.m8{grid-column:span 3;grid-row:span 2}
+
+/* ================= SERVICES ================= */
+
+.services{
+  padding:130px 0;
 }
 
-.detail-gallery-grid .medium{
-  grid-column:span 5;
-  grid-row:span 2;
+.services h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(48px,6vw,78px);
+  line-height:.9;
+  font-weight:500;
+  max-width:700px;
 }
 
-.detail-gallery-grid .small{
-  grid-column:span 5;
-  grid-row:span 1;
+.service-list{
+  margin-top:70px;
+  border-top:1px solid var(--line);
 }
 
-.detail-end{
-  margin-top:80px;
-  padding:70px;
-  background:var(--brown-soft);
+.service{
+  display:grid;
+  grid-template-columns:90px 1fr 1fr;
+  gap:30px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+  align-items:center;
+}
+
+.service-number{
+  color:#a18459;
+  font-size:9px;
+}
+
+.service-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+}
+
+.service-description{
+  font-size:10px;
+  line-height:1.7;
+  color:#74675d;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  background:var(--cream2);
+  padding:110px 0;
+}
+
+.cta-box{
+  background:var(--brown);
   color:var(--cream);
-  text-align:center;
+  padding:70px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
 }
 
-.detail-end h3{
-  font-family:var(--serif);
-  font-size:55px;
-  font-weight:400;
+.cta h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,6vw,72px);
+  line-height:.9;
+  font-weight:500;
 }
 
-.detail-end p{
-  max-width:650px;
-  margin:20px auto 0;
-  color:rgba(238,229,212,.65);
+.cta p{
+  margin-top:20px;
+  max-width:450px;
+  color:rgba(238,230,212,.65);
   font-size:10px;
   line-height:1.8;
 }
 
-/* =========================================================
-   HERITAGE EXPERIENCE
-   ========================================================= */
-
-.experience{
-  background:var(--cream-light);
-  padding:130px 0;
+.cta-button{
+  margin-top:28px;
+  display:inline-flex;
+  padding:14px 22px;
+  background:var(--cream);
+  color:var(--brown);
+  font-size:8px;
+  letter-spacing:.15em;
 }
 
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
-.experience-card{
-  position:relative;
-  height:450px;
-  overflow:hidden;
-  color:#fff;
-}
-
-.experience-card img{
-  height:100%;
-  object-fit:cover;
-  transition:.8s;
-}
-
-.experience-card:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(0deg,rgba(22,10,5,.85),transparent 65%);
-}
-
-.experience-card:hover img{
-  transform:scale(1.06);
-}
-
-.experience-card-content{
-  position:absolute;
-  z-index:2;
-  bottom:25px;
-  left:25px;
-  right:25px;
-}
-
-.experience-card-content small{
-  font-size:7px;
-  letter-spacing:.2em;
-  color:var(--gold-light);
-}
-
-.experience-card-content h3{
-  font-family:var(--serif);
-  font-size:35px;
-  font-weight:400;
-  margin-top:8px;
-}
-
-/* =========================================================
-   PROMISE
-   ========================================================= */
-
-.promise{
-  padding:120px 0;
-  text-align:center;
-}
-
-.promise h2{
-  max-width:950px;
-  margin:20px auto 0;
-  font-family:var(--serif);
-  font-size:clamp(45px,6vw,78px);
-  line-height:.9;
-  font-weight:400;
-}
-
-.promise h2 span{
-  color:var(--gold);
-}
-
-.promise p{
-  max-width:650px;
-  margin:28px auto 0;
-  font-size:10px;
-  line-height:1.9;
-  color:var(--muted);
-}
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-.contact{
-  background:var(--brown);
-  color:var(--cream);
-  padding:120px 0;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:90px;
-}
-
-.contact h2{
-  font-family:var(--serif);
-  font-size:clamp(55px,7vw,90px);
-  font-weight:400;
-  line-height:.85;
-}
-
-.contact h2 span{
-  color:var(--gold-light);
-}
-
-.contact-copy p{
-  max-width:540px;
-  margin-top:25px;
-  font-size:11px;
-  line-height:1.9;
-  color:rgba(238,229,212,.65);
-}
-
-.contact-buttons{
-  display:flex;
-  gap:10px;
-  margin-top:30px;
-}
-
-.contact-info{
-  border-left:1px solid rgba(238,229,212,.15);
+.contact-details{
+  border-left:1px solid rgba(238,230,212,.15);
   padding-left:55px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  gap:28px;
+  gap:25px;
 }
 
-.contact-info div{
+.contact-details div{
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:5px;
 }
 
-.contact-info small{
-  font-size:7px;
-  letter-spacing:.2em;
-  color:var(--gold-light);
+.contact-details span:first-child{
+  font-size:8px;
+  letter-spacing:.18em;
+  color:#b99b6a;
 }
 
-.contact-info a,
-.contact-info span{
-  font-size:11px;
+.contact-details span:last-child{
+  font-size:10px;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ================= FOOTER ================= */
 
 footer{
-  background:var(--brown-dark);
+  background:var(--brown);
   color:var(--cream);
-  padding:70px 0 28px;
+  padding:70px 0 30px;
 }
 
-.footer-main{
+.footer-top{
   display:grid;
-  grid-template-columns:1.3fr 1fr .7fr;
-  gap:50px;
-  padding-bottom:60px;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:65px;
 }
 
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.footer-brand h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:28px;
+  font-weight:500;
 }
 
-.footer-brand img{
-  width:54px;
-  height:54px;
-  object-fit:contain;
+.footer-brand p{
+  margin-top:15px;
+  max-width:260px;
+  font-size:9px;
+  line-height:1.8;
+  color:rgba(238,230,212,.55);
 }
 
-.footer-brand-text{
+.footer-col h4{
   font-size:8px;
-  letter-spacing:.17em;
+  letter-spacing:.18em;
+  color:#b99b6a;
+  margin-bottom:18px;
 }
 
-.footer-tagline{
-  font-family:var(--serif);
-  font-size:25px;
-  line-height:1;
-}
-
-.footer-small{
-  margin-top:14px;
+.footer-col a{
   display:block;
   font-size:9px;
-  line-height:1.7;
-  color:rgba(238,229,212,.55);
-}
-
-.footer-social{
-  display:flex;
-  flex-direction:column;
-  gap:13px;
-}
-
-.footer-social a{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:8px;
-  letter-spacing:.16em;
-  color:rgba(238,229,212,.7);
+  color:rgba(238,230,212,.7);
+  margin:9px 0;
   transition:.3s;
 }
 
-.footer-social a:hover{
+.footer-col a:hover{
   color:#fff;
   transform:translateX(4px);
 }
 
-.social-icon{
-  width:24px;
-  height:24px;
-  border:1px solid rgba(238,229,212,.3);
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  font-size:11px;
-}
-
 .footer-bottom{
-  border-top:1px solid rgba(238,229,212,.12);
+  border-top:1px solid rgba(238,230,212,.12);
   padding-top:22px;
   display:flex;
   justify-content:space-between;
-  gap:20px;
-  color:rgba(238,229,212,.38);
   font-size:7px;
   letter-spacing:.13em;
+  color:rgba(238,230,212,.4);
 }
 
-/* =========================================================
-   FLOATING BUTTONS
-   ========================================================= */
-
-.floating-actions{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  z-index:400;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.float-btn{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  box-shadow:0 12px 30px rgba(0,0,0,.22);
-  transition:.3s;
-}
-
-.float-btn:hover{
-  transform:translateY(-4px) scale(1.04);
-}
-
-.float-wa{
-  background:#25D366;
-}
-
-.float-call{
-  background:#222;
-}
-
-.float-btn svg{
-  width:23px;
-  height:23px;
-  fill:#fff;
-}
-
-/* =========================================================
-   REVEAL
-   ========================================================= */
+/* ================= REVEAL ================= */
 
 .reveal{
   opacity:0;
   transform:translateY(45px);
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
+  transition:opacity .9s ease,transform .9s ease;
 }
 
 .reveal.visible{
@@ -1353,52 +775,32 @@ footer{
   transform:none;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* ================= RESPONSIVE ================= */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-  .header nav{
+  .nav{
     display:none;
   }
 
-  .mini-btn{
-    padding:0 12px;
-  }
-
   .hero{
-    min-height:760px;
+    min-height:650px;
+    padding-bottom:70px;
   }
 
-  .hero h1{
-    font-size:clamp(53px,11vw,80px);
-  }
-
-  .about-grid,
-  .approach-grid,
-  .contact-grid,
-  .detail-description{
+  .intro{
     grid-template-columns:1fr;
     gap:50px;
+    padding:90px 0;
   }
 
-  .about-image{
-    margin-top:50px;
+  .intro-image{
     height:480px;
+    order:2;
   }
 
-  .expertise-item{
-    grid-template-columns:50px 1fr;
-  }
-
-  .expertise-desc{
-    grid-column:2;
-  }
-
-  .expertise-tags{
-    grid-column:2;
-    margin-top:-5px;
+  .heritage-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .project,
@@ -1407,440 +809,208 @@ footer{
   }
 
   .project-image{
-    min-height:450px;
+    height:430px;
   }
 
   .project-info{
-    padding:50px 35px;
+    padding:50px 30px;
   }
 
-  .experience-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .footer-main{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .detail-hero{
-    height:480px;
-  }
-
-}
-
-@media(max-width:600px){
-
-  .shell{
-    width:90%;
-  }
-
-  .header{
-    width:90%;
-  }
-
-  .head-actions .mini-btn{
-    display:none;
-  }
-
-  .logo img{
-    width:40px;
-    height:40px;
-  }
-
-  .logo span{
-    font-size:7px;
-  }
-
-  .hero{
-    padding-bottom:75px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .hero-bottom span:nth-child(2){
-    display:none;
-  }
-
-  .section-head{
+  .projects-head{
     display:block;
   }
 
-  .section-head > p{
+  .projects-head p{
     margin-top:25px;
   }
 
-  .about{
-    padding:90px 0;
+  .service{
+    grid-template-columns:45px 1fr;
   }
 
-  .about-grid h2{
-    font-size:55px;
+  .service-description{
+    grid-column:2;
   }
 
-  .expertise,
-  .projects,
-  .experience,
-  .promise,
-  .contact{
-    padding:90px 0;
-  }
-
-  .experience-grid{
+  .cta-box{
     grid-template-columns:1fr;
+    padding:45px 30px;
+    gap:45px;
   }
 
-  .experience-card{
-    height:390px;
+  .contact-details{
+    border-left:0;
+    border-top:1px solid rgba(238,230,212,.15);
+    padding-left:0;
+    padding-top:35px;
   }
 
-  .feature-list{
-    grid-template-columns:1fr;
+  .footer-top{
+    grid-template-columns:1fr 1fr;
   }
 
-  .detail-gallery-grid{
-    grid-template-columns:1fr;
-    grid-auto-rows:250px;
+  .mosaic-grid{
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:180px;
   }
 
-  .detail-gallery-grid .large,
-  .detail-gallery-grid .medium,
-  .detail-gallery-grid .small{
+  .m1,.m2,.m3,.m4,.m5,.m6,.m7,.m8{
     grid-column:span 1;
     grid-row:span 1;
   }
+}
 
-  .detail-end{
-    padding:45px 25px;
+@media(max-width:520px){
+
+  .header{
+    padding-top:18px;
   }
 
-  .footer-main{
+  .logo-text{
+    font-size:8px;
+  }
+
+  .hero h1{
+    font-size:55px;
+  }
+
+  .heritage-grid{
+    grid-template-columns:1fr;
+  }
+
+  .heritage-card-image{
+    height:300px;
+  }
+
+  .footer-top{
     grid-template-columns:1fr;
   }
 
   .footer-bottom{
     flex-direction:column;
+    gap:10px;
   }
-
-  .floating-actions{
-    right:15px;
-    bottom:15px;
-  }
-
-  .float-btn{
-    width:47px;
-    height:47px;
-  }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================================================
-     LOADER
-     ========================================================= -->
-
-<div class="loader" id="loader">
-  <div class="loader-box">
-    <span>RATHORE HERITAGE DEVELOPERS</span>
-    <strong id="loadNum">0%</strong>
-  </div>
-</div>
-
-
-<!-- =========================================================
-     FULL SCREEN MENU
-     ========================================================= -->
+<!-- ================= MENU ================= -->
 
 <div class="menu-overlay" id="menuOverlay">
 
   <button class="menu-close" id="menuClose">×</button>
 
-  <div class="menu-inner">
-
-    <div class="menu-small">
-      RATHORE HERITAGE DEVELOPERS · RAJASTHAN
-    </div>
-
-    <nav class="menu-links">
-
-      <a href="#home">Home</a>
-
-      <a href="#about">About</a>
-
-      <a href="#expertise">Heritage Expertise</a>
-
-      <a href="#approach">Our Approach</a>
-
-      <a href="#projects">Signature Projects</a>
-
-      <a href="#experience">Heritage Experience</a>
-
-      <a href="#promise">Our Promise</a>
-
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-  </div>
+  <nav class="menu-links">
+    <a href="#home">Home</a>
+    <a href="#story">Royal Legacy</a>
+    <a href="#heritage">Craftsmanship</a>
+    <a href="#projects">Signature Projects</a>
+    <a href="#details">What We Offer</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
 </div>
 
 
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
+<!-- ================= HEADER ================= -->
 
-<header class="header shell" id="header">
+<header class="header">
 
   <a href="#home" class="logo">
-
-    <img
-      src="assets/logo.jpg"
-      alt="Rathore Heritage Developers"
-      onerror="this.style.display='none';document.querySelector('.logo-fallback').style.display='flex'"
-    >
-
-    <div class="logo-fallback">R</div>
-
-    <span>
+    <div class="logo-mark">R</div>
+    <div class="logo-text">
       RATHORE<br>
       HERITAGE DEVELOPERS
-    </span>
-
+    </div>
   </a>
 
-
-  <nav>
-
-    <a href="#about">ABOUT</a>
-
-    <a href="#expertise">CRAFTSMANSHIP</a>
-
-    <a href="#projects">PROJECTS</a>
-
-    <a href="#contact">CONTACT</a>
-
+  <nav class="nav">
+    <a href="#projects">SIGNATURE PROJECTS</a>
+    <a href="#heritage">CRAFTSMANSHIP</a>
+    <a href="#details">OFFERINGS</a>
   </nav>
 
-
-  <div class="head-actions">
-
-    <a
-      class="mini-btn dark magnetic"
-      href="tel:+919414228829"
-    >
-      CALL <span>↗</span>
-    </a>
-
-    <a
-      class="mini-btn gold magnetic"
-      href="https://wa.me/919414228829"
-      target="_blank"
-    >
-      WHATSAPP <span>→</span>
-    </a>
-
-    <button class="menu-btn" id="menuBtn">
-
-      MENU
-
-      <span class="menu-lines">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-
-    </button>
-
-  </div>
+  <button class="menu-btn" id="menuBtn">
+    MENU
+    <span class="menu-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
 
 </header>
 
 
-<main id="mainPage">
+<main>
 
-
-<!-- =========================================================
-     HERO
-     ========================================================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-  <div class="shell">
+  <div class="shell hero-content reveal">
 
-    <div class="hero-content reveal">
-
-      <div class="kicker">
-        HUMAN CRAFTSMANSHIP · RAJASTHAN HERITAGE
-      </div>
-
-      <h1>
-        Where Timeless<br>
-        Indian Heritage<br>
-        Meets <em>Royal Living.</em>
-      </h1>
-
-      <p class="hero-copy">
-        Rathore Heritage Developers specializes in authentic heritage
-        construction and traditional architectural craftsmanship,
-        creating havelis, villas, resorts and palace-style interiors
-        rooted in the royal character of Rajasthan.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          class="action gold magnetic"
-          href="#projects"
-        >
-          EXPLORE OUR HERITAGE
-          <span>→</span>
-        </a>
-
-        <a
-          class="action outline magnetic"
-          href="#contact"
-        >
-          START A CONVERSATION
-          <span>↗</span>
-        </a>
-
-      </div>
-
+    <div class="eyebrow">
+      Preserving Royal Legacy Through Timeless Heritage Architecture
     </div>
 
-  </div>
+    <h1>
+      Where Timeless<br>
+      Indian Heritage<br>
+      Meets Royal Living.
+    </h1>
 
+    <p>
+      Rathore Heritage Developers specializes in authentic heritage construction with deep expertise in traditional architectural craftsmanship.
+    </p>
 
-  <div class="hero-bottom shell">
+    <div class="hero-actions">
+      <a href="#projects" class="btn">
+        Explore Projects <span>→</span>
+      </a>
 
-    <span>
-      <b>01</b>
-      <small>SCROLL DOWN</small>
-    </span>
-
-    <span>
-      PRESERVING ROYAL LEGACY
-    </span>
-
-    <span>
-      UDAIPUR · RAJASTHAN
-    </span>
+      <a href="#heritage" class="btn">
+        Our Craftsmanship <span>→</span>
+      </a>
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- =========================================================
-     ABOUT
-     ========================================================= -->
+<!-- ================= BRAND STORY ================= -->
 
-<section class="about shell" id="about">
+<section class="intro shell" id="story">
 
-  <div class="about-top reveal">
-
-    <span class="section-no">
-      01 / ABOUT
-    </span>
-
-    <span class="about-line"></span>
-
-    <span class="section-no">
-      RATHORE HERITAGE DEVELOPERS
-    </span>
-
-  </div>
-
-
-  <div class="about-grid">
-
-    <h2 class="reveal">
-
-      AUTHENTIC<br>
-      <em>HERITAGE.</em><br>
-      ROYAL LIVING.
-
-    </h2>
-
-
-    <div class="about-copy reveal">
-
-      <p>
-        Rathore Heritage Developers specializes in authentic heritage
-        construction with deep expertise in traditional architectural
-        craftsmanship.
-      </p>
-
-      <p>
-        We design luxurious heritage spaces including havelis, villas,
-        resorts and palace-style interiors that reflect royal elegance
-        and cultural authenticity.
-      </p>
-
-      <p>
-        Our work brings together traditional artistry and strong civil
-        engineering practices to create spaces that carry the visual
-        richness of Rajasthan while maintaining strength, durability
-        and timeless beauty.
-      </p>
-
-      <a
-        class="about-link magnetic"
-        href="#expertise"
-      >
-        DISCOVER OUR CRAFTSMANSHIP
-        <span>↗</span>
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="about-image reveal">
+  <div class="intro-image reveal">
 
     <img
-      src="assets/about.png"
-      alt="Rajasthan Heritage Architecture"
+      src="https://images.unsplash.com/photo-1599661046862-2d4837bac10c?auto=format&fit=crop&w=1100&q=85"
+      alt="Royal Heritage Interior"
     >
 
   </div>
 
-</section>
+  <div class="intro-copy reveal">
 
-
-<!-- =========================================================
-     STATEMENT
-     ========================================================= -->
-
-<section class="statement">
-
-  <div class="statement-inner shell reveal">
-
-    <span class="section-no">
-      THE ESSENCE
-    </span>
+    <div class="eyebrow">
+      About Rathore Heritage Developers
+    </div>
 
     <h2>
-      Heritage is not only<br>
-      what we <span>build.</span><br>
-      It is what we <span>preserve.</span>
+      Built by Hand.<br>
+      Designed to Endure.
     </h2>
 
     <p>
-      From Heritage Dodi entrances and traditional Jharokhas to
-      Thekri glass, Mor Pankh ceilings, carved furniture,
-      Jhomer chandeliers, Khajur Patti marble detailing and
-      traditional architectural elements — every detail contributes
-      to a complete royal palace-style heritage experience.
+      We design luxurious heritage spaces including havelis, villas, resorts, and palace-style interiors that reflect royal elegance and cultural authenticity.
+    </p>
+
+    <p>
+      By blending traditional artistry with strong civil engineering practices, we ensure strength, durability, and timeless beauty in every project.
     </p>
 
   </div>
@@ -1848,868 +1018,566 @@ footer{
 </section>
 
 
-<!-- =========================================================
-     HERITAGE EXPERTISE
-     ========================================================= -->
+<!-- ================= ART OF HERITAGE ================= -->
 
-<section class="expertise shell" id="expertise">
-
-  <div class="expertise-intro reveal">
-
-    <span class="section-no">
-      02 / HERITAGE EXPERTISE
-    </span>
-
-    <h2>
-      OUR HERITAGE<br>
-      <span>EXPERTISE.</span>
-    </h2>
-
-    <p>
-      We focus on every detail — from flooring to ceiling,
-      lighting to furniture — to deliver a complete royal
-      palace-style heritage experience.
-    </p>
-
-  </div>
-
-
-  <div class="expertise-list">
-
-
-    <!-- 01 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">01</div>
-
-      <div class="expertise-name">
-        Heritage Cement & Lime Work
-      </div>
-
-      <div class="expertise-desc">
-        Traditional cement finishes, lime-based work,
-        decorative surfaces and heritage construction
-        detailing executed with attention to authentic
-        character and durability.
-      </div>
-
-    </article>
-
-
-    <!-- 02 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">02</div>
-
-      <div class="expertise-name">
-        Royal Architectural Elements
-      </div>
-
-      <div class="expertise-desc">
-        Designing and executing traditional architectural
-        elements inspired by royal Rajasthani heritage.
-      </div>
-
-      <div class="expertise-tags">
-        Jharokhas · Torans · Chhatris · Domes · Jalis · Mehrabs ·
-        Baradaris · Arches · Pillars · Cornices · Brackets ·
-        Traditional Detailing
-      </div>
-
-    </article>
-
-
-    <!-- 03 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">03</div>
-
-      <div class="expertise-name">
-        Marble & Stone Craftsmanship
-      </div>
-
-      <div class="expertise-desc">
-        Specialized marble and stone detailing for
-        heritage floors, walls and architectural elements.
-      </div>
-
-      <div class="expertise-tags">
-        Marble Inlay · Khajur Patti Borders · Marble Flooring ·
-        Stone Flooring · Carved Stone · Stone Cladding ·
-        Patang Patterns · Custom Marble Detailing
-      </div>
-
-    </article>
-
-
-    <!-- 04 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">04</div>
-
-      <div class="expertise-name">
-        Traditional & Decorative Glass
-      </div>
-
-      <div class="expertise-desc">
-        Creating distinctive heritage interiors through
-        traditional glass craftsmanship.
-      </div>
-
-      <div class="expertise-tags">
-        Thekri Glass · Belgium Glass · Decorative Glass Panels ·
-        Colored Glass · Custom Glass Detailing
-      </div>
-
-    </article>
-
-
-    <!-- 05 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">05</div>
-
-      <div class="expertise-name">
-        Heritage Furniture & Woodwork
-      </div>
-
-      <div class="expertise-desc">
-        Custom-designed furniture inspired by royal
-        Rajasthani aesthetics and handcrafted detailing.
-      </div>
-
-      <div class="expertise-tags">
-        Carved Furniture · Traditional Doors · Wooden Panels ·
-        Royal Seating · Custom Wood Detailing
-      </div>
-
-    </article>
-
-
-    <!-- 06 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">06</div>
-
-      <div class="expertise-name">
-        Lighting & Chandeliers
-      </div>
-
-      <div class="expertise-desc">
-        Statement lighting elements designed and sourced
-        to complement heritage architecture.
-      </div>
-
-      <div class="expertise-tags">
-        Royal Chandeliers · Jhumer · Hanging Lights ·
-        Decorative Fixtures · Custom Heritage Lighting
-      </div>
-
-    </article>
-
-
-    <!-- 07 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">07</div>
-
-      <div class="expertise-name">
-        Heritage Art & Surface Detailing
-      </div>
-
-      <div class="expertise-desc">
-        Artistic finishes and handcrafted surface treatments
-        that add character and cultural richness.
-      </div>
-
-      <div class="expertise-tags">
-        Traditional Painting · Fresco-Inspired Art ·
-        Hand-Painted Details · Decorative Wall Treatments ·
-        Artistic Finishes
-      </div>
-
-    </article>
-
-
-    <!-- 08 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">08</div>
-
-      <div class="expertise-name">
-        Architectural Stone Detailing
-      </div>
-
-      <div class="expertise-desc">
-        Specialized stone craftsmanship for architectural
-        features inspired by Rajasthan's heritage language.
-      </div>
-
-      <div class="expertise-tags">
-        Carved Stone Elements · Stone Pillars · Jaali Work ·
-        Decorative Stone Frames · Arches · Custom Architectural Features
-      </div>
-
-    </article>
-
-
-    <!-- 09 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">09</div>
-
-      <div class="expertise-name">
-        Heritage Flooring
-      </div>
-
-      <div class="expertise-desc">
-        Traditional and luxury flooring solutions with
-        carefully detailed borders and patterns.
-      </div>
-
-      <div class="expertise-tags">
-        Marble Flooring · Patterned Flooring · Inlay Flooring ·
-        Heritage Borders · Custom Floor Designs
-      </div>
-
-    </article>
-
-
-    <!-- 10 -->
-
-    <article class="expertise-item reveal">
-
-      <div class="expertise-number">10</div>
-
-      <div class="expertise-name">
-        Custom Heritage Elements
-      </div>
-
-      <div class="expertise-desc">
-        Every project is different. Bespoke architectural
-        elements and handcrafted details are developed based
-        on the project's character, scale and design language.
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     OUR APPROACH
-     ========================================================= -->
-
-<section class="approach" id="approach">
-
-  <div class="shell approach-grid">
-
-    <div class="reveal">
-
-      <span class="section-no">
-        03 / OUR APPROACH
-      </span>
-
-      <h2>
-        FROM<br>
-        ARCHITECTURE<br>
-        TO <span>ART.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="approach-copy reveal">
-
-      <p>
-        We believe heritage architecture is defined not only by
-        its structure, but by the details that give it a soul.
-      </p>
-
-      <div class="approach-points">
-
-        <div class="approach-point">
-          Traditional Craftsmanship
-        </div>
-
-        <div class="approach-point">
-          <span>×</span>
-          Authentic Materials
-        </div>
-
-        <div class="approach-point">
-          <span>×</span>
-          Architectural Detailing
-        </div>
-
-        <div class="approach-point">
-          <span>×</span>
-          Modern Construction Understanding
-        </div>
-
-      </div>
-
-      <p style="margin-top:30px;">
-        Together, these create spaces that feel royal,
-        authentic and timeless.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     SELECTED PROJECTS
-     ========================================================= -->
-
-<section class="projects shell" id="projects">
-
-  <div class="projects-heading reveal">
-
-    <span class="section-no">
-      04 / SIGNATURE PROJECTS
-    </span>
-
-    <h2>
-      SPACES WITH<br>
-      A <span>ROYAL STORY.</span>
-    </h2>
-
-    <p>
-      Our signature projects combine traditional Rajasthani
-      heritage architecture, handcrafted details and modern
-      civil engineering standards.
-    </p>
-
-  </div>
-
-
-  <!-- =====================================================
-       OLADAR HAVELI
-       ===================================================== -->
-
-  <article class="project reveal">
-
-    <div class="project-image">
-
-      <img
-        src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=90"
-        alt="Oladar Haveli"
-      >
-
-    </div>
-
-    <div class="project-info">
-
-      <div class="project-no">
-        PROJECT 01
-      </div>
-
-      <h3>
-        OLADAR<br>
-        HAVELI
-      </h3>
-
-      <div class="project-type">
-        UDAIPUR · HERITAGE HAVELI CONSTRUCTION
-      </div>
-
-      <p>
-        A complete traditional heritage-style haveli combining
-        Rajasthani architectural character with modern civil
-        engineering standards, quality control and durability.
-      </p>
-
-      <button
-        class="project-view magnetic"
-        onclick="openProject('oladar')"
-      >
-        VIEW PROJECT
-        <span>↗</span>
-      </button>
-
-    </div>
-
-  </article>
-
-
-  <!-- =====================================================
-       ROOPMAHAL
-       ===================================================== -->
-
-  <article class="project reverse reveal">
-
-    <div class="project-info">
-
-      <div class="project-no">
-        PROJECT 02
-      </div>
-
-      <h3>
-        ROOP<br>
-        MAHAL
-      </h3>
-
-      <div class="project-type">
-        UDAIPUR · LUXURY HERITAGE VILLA
-      </div>
-
-      <p>
-        A magnificent heritage-style project inspired by the
-        timeless architecture of Rajasthan, with traditional
-        windows, arches, façade detailing, glass inlay,
-        carvings and classic heritage furniture.
-      </p>
-
-      <button
-        class="project-view magnetic"
-        onclick="openProject('roopmahal')"
-      >
-        VIEW PROJECT
-        <span>↗</span>
-      </button>
-
-    </div>
-
-    <div class="project-image">
-
-      <img
-        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=90"
-        alt="Roopmahal"
-      >
-
-    </div>
-
-  </article>
-
-
-  <!-- =====================================================
-       MOHAN VILLA
-       ===================================================== -->
-
-  <article class="project reveal">
-
-    <div class="project-image">
-
-      <img
-        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=90"
-        alt="Mohan Villa"
-      >
-
-    </div>
-
-    <div class="project-info">
-
-      <div class="project-no">
-        PROJECT 03
-      </div>
-
-      <h3>
-        MOHAN<br>
-        VILLA
-      </h3>
-
-      <div class="project-type">
-        UDAIPUR · HERITAGE STYLE VILLA / FARMHOUSE
-      </div>
-
-      <p>
-        A luxurious heritage-style villa inspired by traditional
-        Rajasthani havelis, featuring carved arches, decorative
-        artwork, stained glass, heritage furniture and
-        Jharokha-style windows.
-      </p>
-
-      <button
-        class="project-view magnetic"
-        onclick="openProject('mohan')"
-      >
-        VIEW PROJECT
-        <span>↗</span>
-      </button>
-
-    </div>
-
-  </article>
-
-
-  <!-- =====================================================
-       FIRST IMPRESSION SALON
-       ===================================================== -->
-
-  <article class="project reverse reveal">
-
-    <div class="project-info">
-
-      <div class="project-no">
-        PROJECT 04
-      </div>
-
-      <h3>
-        FIRST<br>
-        IMPRESSION<br>
-        SALON
-      </h3>
-
-      <div class="project-type">
-        UDAIPUR · PREMIUM COMMERCIAL INTERIOR
-      </div>
-
-      <p>
-        A luxurious heritage-themed salon inspired by the royal
-        charm of Rajasthan, featuring heritage-style interiors,
-        traditional furniture, Belgium glass and intricate
-        Thekri glass craftsmanship.
-      </p>
-
-      <button
-        class="project-view magnetic"
-        onclick="openProject('salon')"
-      >
-        VIEW PROJECT
-        <span>↗</span>
-      </button>
-
-    </div>
-
-    <div class="project-image">
-
-      <img
-        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=90"
-        alt="First Impression Salon"
-      >
-
-    </div>
-
-  </article>
-
-</section>
-
-
-<!-- =========================================================
-     HERITAGE EXPERIENCE
-     ========================================================= -->
-
-<section class="experience" id="experience">
+<section class="heritage" id="heritage">
 
   <div class="shell">
 
     <div class="section-head reveal">
 
-      <div>
-
-        <span class="section-no">
-          05 / HERITAGE EXPERIENCE
-        </span>
-
-        <h2>
-          DETAILS THAT<br>
-          DEFINE <span>ROYALTY.</span>
-        </h2>
-
+      <div class="eyebrow">
+        Our Craftsmanship
       </div>
 
-      <p>
-        From entrance to ceiling, flooring to furniture,
-        lighting to handcrafted surfaces — heritage is
-        created through details.
-      </p>
-
-    </div>
-
-
-    <div class="experience-grid">
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90"
-          alt="Heritage Architectural Element"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            ARCHITECTURAL ELEMENT
-          </small>
-
-          <h3>
-            Jharokha & Mehrab
-          </h3>
-
-        </div>
-
-      </article>
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=90"
-          alt="Royal Interior"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            ROYAL INTERIORS
-          </small>
-
-          <h3>
-            Carved Furniture
-          </h3>
-
-        </div>
-
-      </article>
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=90"
-          alt="Heritage Lighting"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            PALACE ILLUMINATION
-          </small>
-
-          <h3>
-            Jhomer & Chandeliers
-          </h3>
-
-        </div>
-
-      </article>
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=90"
-          alt="Heritage Stone Work"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            STONE CRAFT
-          </small>
-
-          <h3>
-            Carved Stone & Jali
-          </h3>
-
-        </div>
-
-      </article>
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=90"
-          alt="Heritage Flooring"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            FLOORING
-          </small>
-
-          <h3>
-            Marble Inlay & Khajur Patti
-          </h3>
-
-        </div>
-
-      </article>
-
-
-      <article class="experience-card reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90"
-          alt="Heritage Glass"
-        >
-
-        <div class="experience-card-content">
-
-          <small>
-            GLASS CRAFT
-          </small>
-
-          <h3>
-            Thekri & Belgium Glass
-          </h3>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     OUR PROMISE
-     ========================================================= -->
-
-<section class="promise" id="promise">
-
-  <div class="shell reveal">
-
-    <span class="section-no">
-      06 / OUR PROMISE
-    </span>
-
-    <h2>
-      “We don't simply recreate the past.<br>
-      We <span>interpret its craftsmanship</span><br>
-      for the future.”
-    </h2>
-
-    <p>
-      Rathore Heritage Developers<br>
-      Preserving History. Creating Living Heritage.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     CONTACT
-     ========================================================= -->
-
-<section class="contact" id="contact">
-
-  <div class="shell contact-grid">
-
-    <div class="contact-copy reveal">
-
-      <span class="section-no">
-        07 / CONTACT
-      </span>
-
       <h2>
-        BUILD<br>
-        SOMETHING<br>
-        <span>WORTH PRESERVING.</span>
+        The Art of Heritage
       </h2>
 
       <p>
-        Have a heritage project, royal interior or traditional
-        architectural element in mind? Let's discuss the
-        craftsmanship, character and details that will define it.
+        From flooring to ceiling, lighting to furniture — delivering a complete royal palace-style heritage experience.
       </p>
-
-      <div class="contact-buttons">
-
-        <a
-          class="action gold magnetic"
-          href="https://wa.me/919414228829"
-          target="_blank"
-        >
-          WHATSAPP
-          <span>↗</span>
-        </a>
-
-        <a
-          class="action outline magnetic"
-          href="tel:+919414228829"
-        >
-          CALL
-          <span>↗</span>
-        </a>
-
-      </div>
 
     </div>
 
 
-    <div class="contact-info reveal">
+    <div class="heritage-grid">
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Heritage Dodi Entrances">
+        </div>
+
+        <h3>
+          Heritage Dodi Entrances
+        </h3>
+
+        <p>
+          A grand traditional heritage dodi (main entrance gate) constructed at the entrance, creating a royal first impression.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Jharokha & Mehrabs">
+        </div>
+
+        <h3>
+          Jharokhas & Mehrabs
+        </h3>
+
+        <p>
+          Designing and executing traditional elements like Jharokhas, Torans, Chhatris, Domes, Jalis, Mehrabs, and Baradaris.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Thekri Glass Work">
+        </div>
+
+        <h3>
+          Thekri Glass Work
+        </h3>
+
+        <p>
+          Intricate glass inlay work on interior ceilings, decorative aaliya niches, and heritage-style bar areas enhancing light reflection.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Mor Pankh Ceilings">
+        </div>
+
+        <h3>
+          Mor Pankh Ceilings
+        </h3>
+
+        <p>
+          Ceilings detailed with Mor Pankh (peacock feather) artwork alongside authentic Pipal Patti and Tordi craftsmanship.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Ghokda Domes">
+        </div>
+
+        <h3>
+          Ghokda-Style Domes
+        </h3>
+
+        <p>
+          Terrace-level domes constructed in traditional style to enhance architectural elegance and authentic heritage character.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Carved Furniture">
+        </div>
+
+        <h3>
+          Carved Heritage Furniture
+        </h3>
+
+        <p>
+          Custom-designed antique finish furniture, carved beds, traditional doors, and royal seating configurations.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Royal Jhomer Chandeliers">
+        </div>
+
+        <h3>
+          Royal Jhomer Chandeliers
+        </h3>
+
+        <p>
+          Statement lighting elements including royal jhomer chandeliers, hanging lights, and antique wall fixtures.
+        </p>
+
+      </article>
+
+
+      <article class="heritage-card reveal">
+
+        <div class="heritage-card-image">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Marble Inlay & Khajur Patti">
+        </div>
+
+        <h3>
+          Marble Inlay & Khajur Patti
+        </h3>
+
+        <p>
+          Premium white marble flooring with borders finished in Khajur Patti detailing, marble inlay, and Patang patterns.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+  <div class="shell">
+
+    <div class="projects-head reveal">
 
       <div>
+        <div class="eyebrow">
+          Signature Projects
+        </div>
 
-        <small>
-          PHONE
-        </small>
+        <h2>
+          Spaces with<br>
+          a Royal Legacy.
+        </h2>
+      </div>
 
-        <a href="tel:+919414228829">
-          +91 94142 28829
-        </a>
+      <p>
+        From heritage havelis to luxury villas and commercial spaces rooted in traditional craftsmanship.
+      </p>
 
-        <a href="tel:+917850015839">
-          +91 78500 15839
-        </a>
+    </div>
+
+
+    <!-- OLADAR HAVELI -->
+
+    <article class="project reveal">
+
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1500&q=85" alt="Oladar Haveli">
+      </div>
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Heritage Haveli Construction
+        </div>
+
+        <h3>
+          Oladar<br>
+          Haveli
+        </h3>
+
+        <p>
+          Designed and executed in a complete traditional heritage style, combining Rajasthani heritage architecture with modern civil engineering standards.
+        </p>
+
+        <button class="project-link" onclick="openModal('oladarModal')">
+          View Project →
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- ROOP MAHAL -->
+
+    <article class="project reverse reveal">
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Luxury Heritage Villa
+        </div>
+
+        <h3>
+          Roop<br>
+          Mahal
+        </h3>
+
+        <p>
+          A magnificent heritage-style project featuring beautifully crafted heritage windows, traditional arches, intricate glass inlay work, and classic furniture.
+        </p>
+
+        <button class="project-link" onclick="openModal('roopModal')">
+          View Project →
+        </button>
+
+      </div>
+
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85" alt="Roop Mahal">
+      </div>
+
+    </article>
+
+
+    <!-- MOHAN VILLA -->
+
+    <article class="project reveal">
+
+      <div class="project-image">
+
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1500&q=85" alt="Mohan Villa">
+
+      </div>
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Heritage Style Villa / Farmhouse
+        </div>
+
+        <h3>
+          Mohan<br>
+          Villa
+        </h3>
+
+        <p>
+          Luxurious villa showcasing beautifully carved arches, decorative wall artwork, stained glass windows, and antique silver finish heritage furniture.
+        </p>
+
+        <button class="project-link" onclick="openModal('mohanModal')">
+          View Project →
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- FIRST IMPRESSION SALON -->
+
+    <article class="project reverse reveal">
+
+      <div class="project-info">
+
+        <div class="eyebrow">
+          Udaipur · Premium Commercial Interior
+        </div>
+
+        <h3>
+          First Impression<br>
+          Salon
+        </h3>
+
+        <p>
+          Luxurious heritage-themed grooming salon featuring Belgium glass work, intricate Thekri glass inlay, and authentic royal Rajasthani craftsmanship.
+        </p>
+
+        <button class="project-link" onclick="openModal('salonModal')">
+          View Project →
+        </button>
+
+      </div>
+
+      <div class="project-image">
+
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85" alt="First Impression Salon">
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECT MODALS ================= -->
+
+<!-- OLADAR MODAL -->
+<div class="project-modal" id="oladarModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('oladarModal')">×</button>
+    <div class="modal-location">Udaipur · Heritage Haveli Construction</div>
+    <h2 class="modal-title">Oladar Haveli</h2>
+    <p class="modal-desc">
+      The Oladar Haveli project has been designed and executed in a complete traditional heritage style, ensuring modern structural strength, quality control, and durability from foundation to final finishing. Featuring a grand traditional heritage Dodi entrance, intricate Thekri glass work on ceilings and aaliya niches, Mor Pankh themed artwork with Pipal Patti and Tordi detailing, Ghokda-style terrace domes, and premium white marble flooring with Khajur Patti borders.
+    </p>
+    <div class="modal-gallery">
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Oladar 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Oladar 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Oladar 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Oladar 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ROOP MAHAL MODAL -->
+<div class="project-modal" id="roopModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('roopModal')">×</button>
+    <div class="modal-location">Udaipur · Luxury Heritage Villa</div>
+    <h2 class="modal-title">Roop Mahal</h2>
+    <p class="modal-desc">
+      Roop Mahal is a magnificent heritage-style project inspired by the timeless architecture of Rajasthan. The exterior showcases beautifully crafted heritage-style windows, traditional arches, and elegant façade detailing that reflects the charm of royal havelis. The space highlights intricate glass inlay work, artistic carvings, and classic heritage furniture that enhance the royal character of the project.
+    </p>
+    <div class="modal-gallery">
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Roop Mahal 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MOHAN VILLA MODAL -->
+<div class="project-modal" id="mohanModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('mohanModal')">×</button>
+    <div class="modal-location">Udaipur · Heritage Style Villa / Farmhouse</div>
+    <h2 class="modal-title">Mohan Villa</h2>
+    <p class="modal-desc">
+      Mohan Villa is a luxurious heritage-style villa inspired by the traditional architecture of Rajasthani havelis. The design showcases beautifully carved arches, decorative wall artwork, and vibrant stained glass windows that enhance natural light and create a royal ambiance. The interiors feature intricately crafted heritage furniture with an antique silver finish, adding a palace-like elegance to the living spaces.
+    </p>
+    <div class="modal-gallery">
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85" alt="Mohan Villa 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SALON MODAL -->
+<div class="project-modal" id="salonModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('salonModal')">×</button>
+    <div class="modal-location">Udaipur · Premium Commercial Interior</div>
+    <h2 class="modal-title">First Impression Salon</h2>
+    <p class="modal-desc">
+      First Impression Salon is a luxurious heritage-themed salon inspired by the royal charm of Rajasthan. The space features heritage-style interiors, traditional furniture, Belgium glass work, and intricate Thekri glass work, reflecting authentic royal craftsmanship. Classic detailing, artistic elements, and elegant wordings enhance the regal ambiance, creating a premium grooming space with a true touch of heritage elegance.
+    </p>
+    <div class="modal-gallery">
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Salon 1"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Salon 2"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Salon 3"></div>
+      <div class="modal-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Salon 4"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= MOSAIC GALLERY ================= -->
+
+<section class="mosaic" id="gallery">
+
+  <div class="shell">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        Detail Language
+      </div>
+
+      <h2>
+        Made to be Seen.
+      </h2>
+
+      <p>
+        A closer look at the traditional elements, materials and royal atmosphere that define our heritage spaces.
+      </p>
+
+    </div>
+
+
+    <div class="mosaic-grid">
+
+      <div class="mosaic-item m1 reveal">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85" alt="Gallery 1">
+      </div>
+
+      <div class="mosaic-item m2 reveal">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Gallery 2">
+      </div>
+
+      <div class="mosaic-item m3 reveal">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Gallery 3">
+      </div>
+
+      <div class="mosaic-item m4 reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Gallery 4">
+      </div>
+
+      <div class="mosaic-item m5 reveal">
+        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=85" alt="Gallery 5">
+      </div>
+
+      <div class="mosaic-item m6 reveal">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Gallery 6">
+      </div>
+
+      <div class="mosaic-item m7 reveal">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Gallery 7">
+      </div>
+
+      <div class="mosaic-item m8 reveal">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Gallery 8">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="details">
+
+  <div class="shell">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        What We Offer
+      </div>
+
+      <h2>
+        Complete traditional development with authentic architectural detailing and strong structural execution.
+      </h2>
+
+    </div>
+
+
+    <div class="service-list">
+
+      <div class="service reveal">
+
+        <div class="service-number">01</div>
+
+        <div class="service-name">
+          Heritage Haveli Construction
+        </div>
+
+        <div class="service-description">
+          Complete traditional haveli development with authentic architectural detailing and strong structural execution.
+        </div>
 
       </div>
 
 
-      <div>
+      <div class="service reveal">
 
-        <small>
-          EMAIL
-        </small>
+        <div class="service-number">02</div>
 
-        <a href="mailto:rathoreheritagedevelopers@gmail.com">
-          rathoreheritagedevelopers@gmail.com
-        </a>
+        <div class="service-name">
+          Luxury Heritage Villas
+        </div>
 
-      </div>
-
-
-      <div>
-
-        <small>
-          INSTAGRAM
-        </small>
-
-        <a
-          href="https://instagram.com/rh_heritagebuilds"
-          target="_blank"
-        >
-          @rh_heritagebuilds
-        </a>
+        <div class="service-description">
+          Royal-style villas designed with heritage aesthetics and modern civil engineering standards.
+        </div>
 
       </div>
 
 
-      <div>
+      <div class="service reveal">
 
-        <small>
-          LOCATION
-        </small>
+        <div class="service-number">03</div>
 
-        <span>
-          UDAIPUR · RAJASTHAN
-        </span>
+        <div class="service-name">
+          Palace-Style Farmhouse Development
+        </div>
+
+        <div class="service-description">
+          Grand farmhouse projects featuring domes, carved stonework, decorative pillars, and heritage ceilings.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">04</div>
+
+        <div class="service-name">
+          Heritage Hotels & Resort Development
+        </div>
+
+        <div class="service-description">
+          Culturally rich hospitality spaces crafted with traditional craftsmanship and premium finishing.
+        </div>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-number">05</div>
+
+        <div class="service-name">
+          Premium Heritage Commercial Interiors
+        </div>
+
+        <div class="service-description">
+          Heritage-inspired interior solutions including Thekri glass work, heritage Dodi, Mor Pankh ceilings, Jhomer chandeliers, carved furniture, and customized royal detailing.
+        </div>
 
       </div>
 
@@ -2719,95 +1587,114 @@ footer{
 
 </section>
 
+
+<!-- ================= CTA ================= -->
+
+<section class="cta" id="contact">
+
+  <div class="shell">
+
+    <div class="cta-box reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          Begin a Conversation
+        </div>
+
+        <h2>
+          Preserving Royal Legacy<br>
+          Through Timeless Heritage.
+        </h2>
+
+        <p>
+          For heritage homes, villas, hospitality spaces and interiors rooted in traditional Indian craftsmanship.
+        </p>
+
+        <a href="mailto:rathoreheritagedevelopers@gmail.com" class="cta-button">
+          Start a Conversation →
+        </a>
+
+      </div>
+
+
+      <div class="contact-details">
+
+        <div>
+          <span>EMAIL</span>
+          <span>rathoreheritagedevelopers@gmail.com</span>
+        </div>
+
+        <div>
+          <span>PHONE</span>
+          <span>+91 94142 28829 / +91 78500 15839</span>
+        </div>
+
+        <div>
+          <span>LOCATION</span>
+          <span>UDAIPUR, RAJASTHAN</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
 
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
   <div class="shell">
 
-    <div class="footer-main">
-
+    <div class="footer-top">
 
       <div class="footer-brand">
 
-        <img
-          src="assets/logo.jpg"
-          alt="Rathore Heritage Developers"
-        >
+        <h3>
+          Rathore Heritage Developers
+        </h3>
 
-        <div class="footer-brand-text">
-          RATHORE<br>
-          HERITAGE<br>
-          DEVELOPERS
-        </div>
+        <p>
+          Preserving royal legacy through timeless heritage architecture.
+        </p>
 
       </div>
 
 
-      <div>
+      <div class="footer-col">
 
-        <div class="footer-tagline">
-          Preserving Royal Legacy.
-        </div>
+        <h4>NAVIGATION</h4>
 
-        <span class="footer-small">
-          Timeless heritage architecture · Traditional craftsmanship ·
-          Royal interiors · Rajasthan
-        </span>
+        <a href="#projects">Signature Projects</a>
+        <a href="#heritage">Craftsmanship</a>
+        <a href="#details">What We Offer</a>
 
       </div>
 
 
-      <div class="footer-social">
+      <div class="footer-col">
 
-        <!-- Recognizable WhatsApp icon -->
+        <h4>CONTACT</h4>
 
-        <a
-          href="https://wa.me/919414228829"
-          target="_blank"
-        >
+        <a href="mailto:rathoreheritagedevelopers@gmail.com">Email</a>
+        <a href="tel:+919414228829">Phone</a>
+        <a href="#contact">Enquiry</a>
 
-          <span class="social-icon">
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.59 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.75 1.47h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.16-3.46-8.41ZM12.06 21.8h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.23-.37a9.86 9.86 0 1 1 8.37 4.62Zm5.41-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35Z"/>
-            </svg>
-
-          </span>
-
-          WHATSAPP ↗
-
-        </a>
+      </div>
 
 
-        <!-- Recognizable Instagram icon -->
+      <div class="footer-col">
 
-        <a
-          href="https://instagram.com/rh_heritagebuilds"
-          target="_blank"
-        >
+        <h4>SOCIAL</h4>
 
-          <span class="social-icon">
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"
-              fill="none" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="12" cy="12" r="4.2"
-              fill="none" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="17.4" cy="6.7" r="1.1" fill="currentColor"/>
-            </svg>
-
-          </span>
-
-          INSTAGRAM ↗
-
-        </a>
+        <a href="#" target="_blank">Instagram (@rh_heritagebuilds)</a>
+        <a href="#contact">WhatsApp</a>
 
       </div>
 
@@ -2817,15 +1704,11 @@ footer{
     <div class="footer-bottom">
 
       <span>
-        © 2026 RATHORE HERITAGE DEVELOPERS
+        © RATHORE HERITAGE DEVELOPERS · UDAIPUR, RAJASTHAN
       </span>
 
       <span>
-        PRESERVING ROYAL LEGACY THROUGH TIMELESS HERITAGE ARCHITECTURE
-      </span>
-
-      <span>
-        DESIGNED BY MARWAR INFOTECH
+        PRESERVING HISTORY. CREATING LIVING HERITAGE.
       </span>
 
     </div>
@@ -2835,677 +1718,137 @@ footer{
 </footer>
 
 
-<!-- =========================================================
-     FLOATING CALL + WHATSAPP
-     ========================================================= -->
-
-<div class="floating-actions">
-
-  <!-- CALL -->
-
-  <a
-    class="float-btn float-call magnetic"
-    href="tel:+919414228829"
-    aria-label="Call Rathore Heritage Developers"
-  >
-
-    <svg viewBox="0 0 24 24">
-      <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.16 21 3 12.84 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02l-2.19 2.2Z"/>
-    </svg>
-
-  </a>
-
-
-  <!-- WHATSAPP -->
-
-  <a
-    class="float-btn float-wa magnetic"
-    href="https://wa.me/919414228829"
-    target="_blank"
-    aria-label="WhatsApp Rathore Heritage Developers"
-  >
-
-    <svg viewBox="0 0 24 24">
-      <path d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.59 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.75 1.47h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.16-3.46-8.41ZM12.06 21.8h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.23-.37a9.86 9.86 0 1 1 8.37 4.62Zm5.41-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35Z"/>
-    </svg>
-
-  </a>
-
-</div>
-
-
-<!-- =========================================================
-     PROJECT DETAIL PAGE / SPA
-     ========================================================= -->
-
-<div class="project-detail" id="projectDetail">
-
-  <div class="detail-topbar">
-
-    <span class="detail-brand">
-      RATHORE HERITAGE DEVELOPERS
-    </span>
-
-    <button
-      class="detail-close"
-      onclick="closeProject()"
-    >
-      ← BACK TO PROJECTS
-    </button>
-
-  </div>
-
-
-  <div class="detail-content" id="detailContent">
-  </div>
-
-</div>
-
-
 <script>
 
-/* =========================================================
-   PROJECT DATA
-   ========================================================= */
-
-const projects = {
-
-  oladar: {
-
-    title:"OLADAR HAVeli",
-    displayTitle:"OLADAR HAVELI",
-
-    location:"Udaipur · Heritage Haveli Construction",
-
-    hero:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=90",
-
-    description:[
-      "The Oladar Haveli project has been designed and executed in a complete traditional heritage style, while ensuring modern structural strength, quality control and durability from foundation to final finishing.",
-
-      "The project combines traditional Rajasthani heritage architecture with modern civil engineering standards to ensure both aesthetic beauty and structural safety.",
-
-      "A grand traditional Heritage Dodi (Main Entrance Gate) has been constructed at the entrance, creating a royal first impression of the haveli."
-    ],
-
-    features:[
-      "Grand Heritage Dodi / Main Door",
-      "Traditional Rajasthani Heritage Architecture",
-      "Thekri Glass Work",
-      "Thekri Glass on Interior Ceilings",
-      "Thekri Glass in Decorative Aaliya",
-      "Thekri Glass in Heritage-style Bar Area",
-      "Mor Pankh / Peacock Feather Ceiling Art",
-      "Pipla Patti Detailing",
-      "Tordi Detailing",
-      "Three Ghokda-style Terrace Domes",
-      "Heritage-style Rooftop Bar",
-      "Traditional Staircase Elements",
-      "Premium White Marble Flooring",
-      "Khajur Patti Marble Borders",
-      "Carving Furniture",
-      "Decorative Heritage Pillars",
-      "Heritage-style Jhomer Chandeliers",
-      "Three Reception Chandeliers"
-    ],
-
-    gallery:[
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=90",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=90"
-    ]
-
-  },
-
-
-  roopmahal: {
-
-    title:"ROOPMAHAL",
-
-    location:"Udaipur · Luxury Heritage Villa",
-
-    hero:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90",
-
-    description:[
-      "Roopmahal is a magnificent heritage-style project inspired by the timeless architecture of Rajasthan.",
-
-      "The exterior showcases beautifully crafted heritage-style windows, traditional arches and elegant façade detailing that reflects the charm of royal havelis.",
-
-      "The space highlights intricate glass inlay work, artistic carvings and classic heritage furniture that enhance the royal character of the project.",
-
-      "Every element, from the architectural details to the interior craftsmanship, has been thoughtfully designed to create an authentic heritage ambiance while maintaining luxury and elegance."
-    ],
-
-    features:[
-      "Heritage-style Windows",
-      "Traditional Arches",
-      "Royal Haveli-inspired Façade",
-      "Elegant Façade Detailing",
-      "Intricate Glass Inlay Work",
-      "Artistic Carvings",
-      "Classic Heritage Furniture",
-      "Royal Interior Character",
-      "Authentic Heritage Ambiance",
-      "Luxury Heritage Finish"
-    ],
-
-    gallery:[
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90"
-    ]
-
-  },
-
-
-  mohan: {
-
-    title:"MOHAN VILLA",
-
-    location:"Udaipur · Heritage Style Villa / Farmhouse",
-
-    hero:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=90",
-
-    description:[
-      "Mohan Villa is a luxurious heritage-style villa inspired by the traditional architecture of Rajasthani havelis.",
-
-      "The design showcases beautifully carved arches, decorative wall artwork and vibrant stained glass windows that enhance natural light and create a royal ambiance.",
-
-      "The interiors feature intricately crafted heritage furniture with an antique silver finish, adding a palace-like elegance to the living spaces.",
-
-      "Elements such as traditional Jharokha-style windows, detailed ceiling artwork and handcrafted décor reflect the timeless craftsmanship and cultural richness of Rajasthan's royal heritage."
-    ],
-
-    features:[
-      "Carved Heritage Arches",
-      "Decorative Wall Artwork",
-      "Vibrant Stained Glass Windows",
-      "Royal Natural Light",
-      "Heritage Furniture",
-      "Antique Silver Finish",
-      "Jharokha-style Windows",
-      "Detailed Ceiling Artwork",
-      "Handcrafted Décor",
-      "Rajasthani Royal Heritage Character"
-    ],
-
-    gallery:[
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90",
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90"
-    ]
-
-  },
-
-
-  salon: {
-
-    title:"FIRST IMPRESSION SALON",
-
-    location:"Udaipur · Premium Commercial Interior",
-
-    hero:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=90",
-
-    description:[
-      "First Impression Salon is a luxurious heritage-themed salon inspired by the royal charm of Rajasthan.",
-
-      "The space features heritage-style interiors, traditional furniture, Belgium glass work and intricate Thekri glass work, reflecting authentic royal craftsmanship.",
-
-      "Classic detailing, artistic elements and elegant finishes enhance the regal ambiance, creating a premium grooming space with a true touch of heritage elegance."
-    ],
-
-    features:[
-      "Heritage-themed Salon Interior",
-      "Royal Rajasthani Inspiration",
-      "Heritage-style Interiors",
-      "Traditional Furniture",
-      "Belgium Glass Work",
-      "Intricate Thekri Glass Work",
-      "Classic Architectural Detailing",
-      "Artistic Elements",
-      "Regal Ambiance",
-      "Premium Grooming Space"
-    ],
-
-    gallery:[
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=90",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90"
-    ]
-
-  }
-
-};
-
-
-/* =========================================================
-   PROJECT DETAIL RENDER
-   ========================================================= */
-
-function renderProject(key){
-
-  const project = projects[key];
-
-  if(!project) return;
-
-
-  const features = project.features.map((item,index)=>`
-
-    <div class="feature">
-      <span>
-        ${String(index+1).padStart(2,"0")}
-      </span>
-      &nbsp;&nbsp;
-      ${item}
-    </div>
-
-  `).join("");
-
-
-  const gallery = project.gallery.map((image,index)=>`
-
-    <div class="
-      gallery-image
-      ${index===0 ? "large" : ""}
-      ${index===1 || index===2 ? "medium" : ""}
-      ${index>2 ? "small" : ""}
-    ">
-
-      <img
-        src="${image}"
-        alt="${project.title} heritage project image ${index+1}"
-      >
-
-    </div>
-
-  `).join("");
-
-
-  document.getElementById("detailContent").innerHTML = `
-
-    <div class="detail-kicker">
-      FEATURED HERITAGE PROJECT
-    </div>
-
-    <h1 class="detail-title">
-      ${project.title}
-    </h1>
-
-    <div class="detail-location">
-      ${project.location}
-    </div>
-
-
-    <div class="detail-hero">
-
-      <img
-        src="${project.hero}"
-        alt="${project.title}"
-      >
-
-    </div>
-
-
-    <div class="detail-description">
-
-      <div>
-
-        <span class="section-no">
-          THE PROJECT
-        </span>
-
-        <h3>
-          Heritage,<br>
-          crafted in<br>
-          every detail.
-        </h3>
-
-      </div>
-
-
-      <div>
-
-        ${project.description.map(text=>`
-
-          <p>${text}</p>
-
-        `).join("")}
-
-      </div>
-
-    </div>
-
-
-    <div class="detail-features">
-
-      <h3>
-        Heritage Elements
-      </h3>
-
-      <div class="feature-list">
-
-        ${features}
-
-      </div>
-
-    </div>
-
-
-    <div class="detail-gallery">
-
-      <span class="section-no">
-        PROJECT GALLERY
-      </span>
-
-      <h3>
-        Details of ${project.title}.
-      </h3>
-
-      <div class="detail-gallery-grid">
-
-        ${gallery}
-
-      </div>
-
-    </div>
-
-
-    <div class="detail-end">
-
-      <h3>
-        Living Heritage.
-      </h3>
-
-      <p>
-        Rathore Heritage Developers combines traditional
-        Rajasthani craftsmanship with modern construction
-        understanding to create spaces that feel royal,
-        authentic and timeless.
-      </p>
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
-   OPEN PROJECT
-   ========================================================= */
-
-function openProject(key){
-
-  renderProject(key);
-
-  const detail = document.getElementById("projectDetail");
-
-  detail.classList.add("active");
-
-  document.body.classList.add("detail-open");
-
-  detail.scrollTop = 0;
-
-}
-
-
-/* =========================================================
-   CLOSE PROJECT
-   ========================================================= */
-
-function closeProject(){
-
-  const detail = document.getElementById("projectDetail");
-
-  detail.classList.remove("active");
-
-  document.body.classList.remove("detail-open");
-
-}
-
-
-/* =========================================================
-   THREE-LINE MENU
-   ========================================================= */
-
-const menuBtn =
-  document.getElementById("menuBtn");
-
-const menuOverlay =
-  document.getElementById("menuOverlay");
-
-const menuClose =
-  document.getElementById("menuClose");
-
+/* ================= MENU ================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+const menuClose = document.getElementById("menuClose");
 
 menuBtn.addEventListener("click",()=>{
-
   menuOverlay.classList.add("active");
-
   document.body.style.overflow="hidden";
-
 });
-
 
 menuClose.addEventListener("click",()=>{
-
   menuOverlay.classList.remove("active");
-
   document.body.style.overflow="";
+});
 
+document.querySelectorAll(".menu-links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow="";
+  });
 });
 
 
-document.querySelectorAll(".menu-links a")
-.forEach(link=>{
+/* ================= PROJECT MODALS ================= */
 
-  link.addEventListener("click",()=>{
+function openModal(modalId){
+  document.getElementById(modalId).classList.add("active");
+  document.body.style.overflow="hidden";
+}
 
-    menuOverlay.classList.remove("active");
+function closeModal(modalId){
+  document.getElementById(modalId).classList.remove("active");
+  document.body.style.overflow="";
+}
 
+// Close modal on outside click
+window.addEventListener("click", e => {
+  if(e.target.classList.contains("project-modal")){
+    e.target.classList.remove("active");
     document.body.style.overflow="";
+  }
+});
 
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer = new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold:.12
+  }
+);
+
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
+
+
+/* ================= MAGNETIC BUTTON EFFECT ================= */
+
+document.querySelectorAll(".btn,.project-link,.cta-button").forEach(btn=>{
+
+  btn.addEventListener("mousemove",e=>{
+
+    const rect=btn.getBoundingClientRect();
+
+    const x=(e.clientX-rect.left-rect.width/2)*.08;
+    const y=(e.clientY-rect.top-rect.height/2)*.08;
+
+    btn.style.transform=`translate(${x}px,${y}px)`;
+
+  });
+
+  btn.addEventListener("mouseleave",()=>{
+    btn.style.transform="";
   });
 
 });
 
+
+/* ================= HEADER BACKGROUND ================= */
+
+window.addEventListener("scroll",()=>{
+
+  const header=document.querySelector(".header");
+
+  if(window.scrollY>80){
+
+    header.style.background="rgba(33,19,13,.92)";
+    header.style.padding="13px 20px";
+    header.style.borderRadius="0 0 8px 8px";
+    header.style.backdropFilter="blur(12px)";
+
+  }else{
+
+    header.style.background="transparent";
+    header.style.padding="22px 0";
+    header.style.borderRadius="";
+    header.style.backdropFilter="";
+
+  }
+
+});
+
+
+/* ================= ESCAPE MENU ================= */
 
 document.addEventListener("keydown",e=>{
 
   if(e.key==="Escape"){
 
     menuOverlay.classList.remove("active");
-
     document.body.style.overflow="";
 
-    closeProject();
+    document.querySelectorAll(".project-modal").forEach(modal=>{
+      modal.classList.remove("active");
+    });
 
   }
 
 });
-
-
-/* =========================================================
-   SCROLL REVEAL
-   ========================================================= */
-
-const observer =
-  new IntersectionObserver(
-    entries=>{
-
-      entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-          entry.target.classList.add("visible");
-
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-    {
-      threshold:.1
-    }
-  );
-
-
-document.querySelectorAll(".reveal")
-.forEach(element=>{
-
-  observer.observe(element);
-
-});
-
-
-/* =========================================================
-   MAGNETIC BUTTONS
-   ========================================================= */
-
-document.querySelectorAll(".magnetic")
-.forEach(element=>{
-
-  element.addEventListener("mousemove",event=>{
-
-    if(!matchMedia("(hover:hover)").matches)
-      return;
-
-    const rect =
-      element.getBoundingClientRect();
-
-    const x =
-      (event.clientX -
-      rect.left -
-      rect.width/2) * .07;
-
-    const y =
-      (event.clientY -
-      rect.top -
-      rect.height/2) * .07;
-
-    element.style.transform =
-      `translate(${x}px,${y}px)`;
-
-  });
-
-
-  element.addEventListener("mouseleave",()=>{
-
-    element.style.transform="";
-
-  });
-
-});
-
-
-/* =========================================================
-   HEADER SCROLL
-   ========================================================= */
-
-window.addEventListener("scroll",()=>{
-
-  const header =
-    document.getElementById("header");
-
-  if(window.scrollY > 70){
-
-    header.classList.add("scrolled");
-
-  }else{
-
-    header.classList.remove("scrolled");
-
-  }
-
-});
-
-
-/* =========================================================
-   LOADER
-   ========================================================= */
-
-let loading = 0;
-
-const loadingInterval =
-  setInterval(()=>{
-
-    loading += 5;
-
-    if(loading > 100)
-      loading = 100;
-
-    document.getElementById("loadNum")
-      .textContent = loading + "%";
-
-    if(loading >= 100){
-
-      clearInterval(loadingInterval);
-
-      setTimeout(()=>{
-
-        document.getElementById("loader")
-          .classList.add("hide");
-
-      },250);
-
-    }
-
-  },35);
-
-
-/* =========================================================
-   URL PROJECT SUPPORT
-   =========================================================
-   Example:
-   index.html?project=oladar
-
-   This makes project detail accessible as a
-   separate browser page/tab while keeping only
-   one HTML file.
-   ========================================================= */
-
-const params =
-  new URLSearchParams(window.location.search);
-
-const projectFromUrl =
-  params.get("project");
-
-
-if(projectFromUrl &&
-   projects[projectFromUrl]){
-
-  setTimeout(()=>{
-
-    openProject(projectFromUrl);
-
-  },350);
-
-}
-
-
-/* =========================================================
-   BROWSER BACK BUTTON
-   ========================================================= */
-
-window.addEventListener("popstate",()=>{
-
-  closeProject();
-
-});
-
 
 </script>
 
